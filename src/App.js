@@ -1,5 +1,5 @@
 import React from 'react'
-import Product from 'Products/Product'
+import Products from 'Products/Product'
 
 const App = () => {
 
@@ -225,7 +225,7 @@ const App = () => {
     ]
 
     return (
-        <Product data={productAr} />
+        <Products data={productAr} />
       )
     }
     
