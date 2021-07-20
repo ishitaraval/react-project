@@ -277,9 +277,6 @@ label.rating{
     .search{
         background-color: white;
     }
-    .m-hide{
-        display: block;
-    }
     main{
         box-shadow:5px 50px 50px 5px rgb(228, 128, 62);  
         background-color: var(--global-color-primary);
@@ -291,7 +288,6 @@ label.rating{
         grid-template-columns:1fr 2fr;
         grid-template-areas:
         "sidebar results" ;
-        /* column-gap: 2em; */
     }
     .search-bar{
         display: flex;
