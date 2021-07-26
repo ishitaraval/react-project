@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import p_Img from 'img/1b.jpg'
+import p_Img from 'img/iphone 11.jpg'
 
-const Image = ({src, alt, ...attr}) => {
+const image = ({src, alt, ...attr}) => {
 
   // State will hold the image url
   const [img, setImg] = useState(``)
@@ -15,4 +15,4 @@ const Image = ({src, alt, ...attr}) => {
   )
 }
 
-export default Image
+export default image

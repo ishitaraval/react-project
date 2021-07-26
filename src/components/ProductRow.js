@@ -8,7 +8,7 @@ const ProductRow = ({data}) => {
     // Adding class name product to the article created
     article_item.classList.add('product')
 
-    article_item.innerHTML = `<p>Hello</p>`
+    
 
     let the_r = []
     for (let x = 0; x < 5; x++) {

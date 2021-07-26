@@ -8,7 +8,7 @@ const Layout = ({children}) => {
     <>
       <Header />
       
-      {/* <!--------- Main content ----------> */}
+    
       <main className="products">
         {children}
       </main>
