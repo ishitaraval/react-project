@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import Layout from 'components/Layout'
-// import SearchFilter from 'components/SearchFilter'
 import SearchResults from 'components/SearchResults'
 
 const Products = ({data}) => {
