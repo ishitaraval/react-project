@@ -23,7 +23,7 @@ const Products = ({data}) => {
                                   iprodt_storage.filter((store) => storage.includes(store)).length > 0) 
                                   .sort(sort)  
 
-// Product category filter
+
 const onColorChange = ({target}) => {
   if (target.checked) {
     setSearchState({
@@ -38,7 +38,6 @@ const onColorChange = ({target}) => {
   }
 }  
 
-// Product weight filter
 const onStorageChange = ({target}) => {
     const st = parseInt(target.value)
   if (target.checked) {
