@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import p_Img from 'img/iphone 11.jpg'
+import p_Img from 'img/iphone-x.jpg'
 
 const image = ({src, alt, ...attr}) => {
 
