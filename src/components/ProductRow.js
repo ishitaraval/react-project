@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'components/Image'
+import Image from 'components/image'
 
 const ProductRow = ({data}) => {
   const {id, prod_img, prod_link, prod_name, prod_descrip, prod_price, prod_rating, prod_col, prod_storage} = data
