@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from 'img/winHubLogo1.png';
+import logo from 'img/logo.png';
 
 const Header = () => {
 
@@ -8,7 +8,7 @@ const Header = () => {
 
     <header className="page-header">
       <a href="index.html" className="logo">
-         <img src="img/logo.svg"/>
+         <img src="img/logo.png"/>
       </a>
 
       <button type="button" class="nav-toggle">
