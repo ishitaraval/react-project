@@ -96,7 +96,7 @@ return (
               </fieldset>
               <fieldset id="filter-color" onChange={onColorChange}>
                  <legend>Colors</legend>
-                 <ul class="filter-list">
+                 <ul className="filter-list">
                     <li><input type="checkbox" className="check"  name="filter-col" value="black" id="black"/> 
                         <label  htmlFor="black">Black</label>
                     </li>
@@ -116,7 +116,7 @@ return (
              </fieldset>
               <fieldset id="filter-storage"  onChange={onStorageChange}>
                  <legend>Storage</legend>
-                 <ol class="filter-list">
+                 <ol className="filter-list">
                      <li>
                          <input type="checkbox" name="filter-store" value="32" id="32" /> 
                         <label htmlFor="32">32 gb</label>

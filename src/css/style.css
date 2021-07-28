@@ -57,7 +57,7 @@ a{
 .search-bar{
     display: block;
 }
-.header-cart, .prodcut-list-cart{
+.header-cart, .product-list-cart{
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
