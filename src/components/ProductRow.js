@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import noImg from 'img/iphone-x.jpg'
+import noImg from 'img/product.png'
 
 const ProductRow = ({data}) => {
   const {id, iprod_img, iprod_link, iprod_name, iprod_descrip, iprod_price, iprod_rating, iprod_col, iprod_storage} = data
@@ -7,7 +7,7 @@ const ProductRow = ({data}) => {
     const article_item = document.createElement('article')
     // Adding class name product to the article created
     article_item.classList.add('product')
-
+     let noImg
     const [img , setImg] = useState(``)
 
     import(`img/${iprod_img}`).then((image) => setImg(image.default))
@@ -29,7 +29,7 @@ const ProductRow = ({data}) => {
     
     return (
         <article className="product">
-            <Image src={img} alt={iprodt_name}/>
+            <Image src={(img) ? img : noImg } alt={iprodt_name}/>
             
             <div className="prod-details">
                <h3 id="filtername"><a href={iprod_link}>{iprod_name}</a></h3>
