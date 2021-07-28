@@ -8,14 +8,14 @@ filterPrice.addEventListener(`change`, function(event){
   const theRange = event.target
   const  theOutput= document.querySelector(`output[for="filterPrice"]`)
     theOutput.textContent = theRange.value
-    const filteredproducts = productAr.filter(function(iproducts){
+    const filteredArray = data.filter(function(iproducts){
        if(iproducts.iprodt_price.sale >= Number(theRange.value)){
          return true
        }else{
          return false
        }
     })
-    setProductsTable(filteredproducts) 
+    
 })
 
   const [searchState, setSearchState] = useState({
