@@ -5,7 +5,7 @@ const Footer = () => {
     
     <footer className="page-footer">
     <div className="main-footer">
-         <nav aria-label="Legal" className="footer-nav">
+         <nav  className="footer-nav">
           <ul className="page-nav">
             <li><a href="#" style="color: black; text-decoration: underline;">Terms of Use</a></li>
             <li><a href="#" style="color: black; text-decoration: underline;">Privacy Policy</a></li>
