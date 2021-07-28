@@ -21,17 +21,10 @@
 .nav-toggle{
     grid-area: menu-toggle;
     width: 3em;
-    margin: 1em 0px 0px 1em;
     justify-content: flex-start;
 }
 .radio-btn{
     list-style-type: none;
-}
-.header-cart{
-    grid-area: cart;
-    display: flex;
-    justify-content: flex-end;
-    margin: 1em 1em 0px 0em;
 }
 .filter-list{
     list-style-type: none;
@@ -58,8 +51,8 @@ a{
     text-decoration: none;
 }
 .menu , .submenu{
-    color: black; 
-    background-color: rgb(28, 4, 51);
+    color: white; 
+    background-color: blueviolet;
 }
 .search-bar{
     display: block;
@@ -73,9 +66,6 @@ a{
 .logo{
     width:200px;
     justify-self: center
-}
-.m-hide{
-    display: none;
 }
 main{
     display: grid;
@@ -138,7 +128,7 @@ label.rating{
     font-size: 1.2em;
 }
 
-.legal{
+.legal, .social{
     display: inline-flex;
     flex-wrap: wrap;
     gap: 1em;
@@ -148,41 +138,17 @@ label.rating{
    border-left: .2em solid var(--alt-text-color);
    border-right: .2em solid var(--alt-text-color);
  }
+ .social{
+     margin-bottom: 2em;
+ }
+ .social{
+    justify-content:center;
+    text-align: center;
+ }
 .footer-nav{
     text-align: center;
     padding-bottom: 1.5em;
     border-bottom: 1px solid var(--alt-text-color);
-}
-.pages{
-    text-align: center;
-}
-.ant-pagination{
-    display: flex;
-    gap: 1em;
-}
-
-.ant-pagination-item:active{
-    color:rgb(27, 214, 20);
-}
-.control-check{
-    cursor: pointer;
-    display: inline;
-    content: '';
-    position: absolute; 
-    text-align: center;
-    left: 1.5em;
-    top: .3em;
-    width: 1.4em;
-    height: 1.4em;
-    border: 1px solid rgb(0, 0, 0);
-    background: var(--alt-color);
-    border-radius: .2em;
-    box-shadow: inset 0 1px 3px rgba(110, 110, 110, 0.1), 0 0 0 rgba(203, 34, 237, .2);
-    
-}
-.filter-list li input[type=checkbox], .filter-list li input[type=radio]{
-    width: 60px;
-    opacity: 0;
 }
 
 /* ============== start media queries ============*/
@@ -245,14 +211,14 @@ label.rating{
         background:var(--btn-color); /* Sub menu items background colour */
         color:var(--prim-text-color);
     }
-
+    /* Make the sub menus appear on hover */
     .navigation ul li:hover ul,
-    .navigation ul li.hover ul { 
+    .navigation ul li.hover ul { /* This line is required for IE 6 and below */
         background-color: var(--secondary-on);
         position: absolute;
         display:block;     
     }
-    .navigation, .search{
+    .navigation, .m-hide, .search{
         display: block;
     }
     .menu>li:hover {
@@ -267,12 +233,12 @@ label.rating{
     .find{
         border: 0px;
         align-self: flex-start;
-        
+        /* height: 2.5em; */
     }
     .search{
         padding: 0;
         border: 0;
-        
+        /* background: var(--global-color-primary); */
     }
     .search{
         background-color: white;
@@ -288,6 +254,7 @@ label.rating{
         grid-template-columns:1fr 2fr;
         grid-template-areas:
         "sidebar results" ;
+        /* column-gap: 2em; */
     }
     .search-bar{
         display: flex;
@@ -307,7 +274,7 @@ label.rating{
         gap: 2em;
     }
     .product{
-       
+        /* background-color: red; */
         align-self: flex-start;
     }
     
