@@ -150,21 +150,21 @@ return (
                          </label>
                      </li>
                       <li>
-                          <input type="radio" name="rating" value="3" id="aboveThree" className="checkbox.hide" />
+                          <input type="radio" name="rating" value="3" id="aboveThree" />
                           <label htmlFor="aboveThree" className="rating">
                           <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
                            
                          </label>
                      </li>
                       <li>
-                         <input type="radio" name="rating" value="2" id="aboveTwo" className="checkbox.hide" />
+                         <input type="radio" name="rating" value="2" id="aboveTwo"  />
                          <label htmlFor="aboveTwo" className="rating">
                          <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
                          
                          </label>
                      </li>
                      <li>
-                         <input type="radio" name="rating" value="1" id="aboveOne" className="radio.hide" />
+                         <input type="radio" name="rating" value="1" id="aboveOne" />
                          <label htmlFor="aboveOne" className="rating">
                           <span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
                           
