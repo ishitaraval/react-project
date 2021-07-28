@@ -27,8 +27,8 @@ const ProductRow = ({data}) => {
     
     return (
         <article className="product">
-            <Image src={prod_img} alt={prod_name} className="p_image"/>
-            {/* <img src={p_Img} alt={prod_name} className="p_image" /> */}
+            <Image src={prod_img} alt={prod_name}/>
+            
             <div className="prod-details">
                <h3 id="filtername"><a href={prod_link}>{prod_name}</a></h3>
               <data value={prod_price[1]}><del>${prod_price[0]}</del> <ins>${prod_price[1]}</ins></data>
@@ -37,7 +37,7 @@ const ProductRow = ({data}) => {
                  <dt>Rating</dt>
                      <dd>${prod_rating} <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
                  </dl>
-              <a href="#"style="color: lightseagreen; text-decoration: underline;">see more</a>
+              <a href="#"style="color: blue; text-decoration: underline;">see more</a>
   
              <form className="product-prop">
                  <fieldset>
