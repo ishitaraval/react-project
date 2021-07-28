@@ -162,3 +162,71 @@ addToCart.addEventListener(`click`,function(event){
 
 addToCart.addEventListener(`click`, decisionMade)
 
+const filterAndSort = function() {
+  // Do all the filtering, then print the list
+
+  // filter() is a loop that includes/excludes values from an array to build a new array
+  //    If the callback function returns true, the value is added to the new array
+  //    If the callback function returns false, the value is NOT added to the new array
+
+  console.log(searchFilter.iprodt_price.length)
+
+  const filteredArray = productAr.filter((iproducts) => iproducts.iprodt_price >= searchFilter.iprodt_price)
+                                  .filter((iproducts) => iproducts.iprodt_name.toUpperCase().includes(searchFilter.query))
+                                  .filter((iproducts) => searchFilter.iprodt_colors.length === 0 || 
+                                  iproducts.iprodt_colors.filter((color) => searchFilter.colors.includes(color)).length > 0)
+                                  .filter((iproducts) => searchFilter.iprodt_storage.length === 0 || 
+                                  iproducts.iprodt_storage.filter((storage) => searchFilter.storages.includes(storage)).length > 0)
+                                  .sort(searchFilter.sort)
+
+  // Go build the UI with the new filtered array
+  setProductsTable(filteredArray)
+}
+
+filterName.addEventListener(`input`, function(event) {
+  searchFilter.query = event.target.value.toUpperCase()
+
+  // Now search
+  filterAndSort()
+})
+
+filterColored.addEventListener(`change`, function(event) {
+
+  // A few ways to gather all of the companion elements with the same "name"
+  // const theCourses = document.querySelectorAll(`[name="${event.target.name}"]`)
+  // const theCourses = event.target.closest(`fieldset`).elements
+  const theColors = event.target.form.elements[event.target.iprodt_colors]
+
+  // Filter to only the checked ones, then return the "value" of those to an array
+  searchFilter.colors = [...theColors]
+                            .filter((color) => color.checked)
+                            .map((color) => color.value)
+
+  filterAndSort()
+})
+
+filterStorage.addEventListener(`change`, function(event) {
+
+  // A few ways to gather all of the companion elements with the same "name"
+  // const theCourses = document.querySelectorAll(`[name="${event.target.name}"]`)
+  // const theCourses = event.target.closest(`fieldset`).elements
+  const theStorages = event.target.form.elements[event.target.iprodt_storage]
+
+  // Filter to only the checked ones, then return the "value" of those to an array
+  searchFilter.storages = [...theStorages]
+                            .filter((storage) => storage.checked)
+                            .map((storage) => storage.value)
+
+  filterAndSort()
+})
+
+sortBy.addEventListener(`change`, function(event) {
+  
+  if (event.target.value === "0") {
+    searchFilter.sort = (a, b) => a.iprodt_price - b.iprodt_price
+  } else if (event.target.value === "1") {
+    searchFilter.sort = (a, b) => b.iprodt_price - a.iprodt_price
+  }
+
+  filterAndSort()
+})
