@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import noImg from 'img/product.png'
+import React from 'react'
+import Image from 'components/Image'
+
 
 const ProductRow = ({data}) => {
   const {id, iprod_img, iprod_link, iprod_name, iprod_descrip, iprod_price, iprod_rating, iprod_col, iprod_storage} = data
@@ -7,10 +8,7 @@ const ProductRow = ({data}) => {
     const article_item = document.createElement('article')
     // Adding class name product to the article created
     article_item.classList.add('product')
-     let noImg
-    const [img , setImg] = useState(``)
-
-    import(`img/${iprod_img}`).then((image) => setImg(image.default))
+    
 
     let the_r = []
     for (let x = 0; x < 5; x++) {
@@ -29,7 +27,7 @@ const ProductRow = ({data}) => {
     
     return (
         <article className="product">
-            <Image src={(img) ? img : noImg } alt={iprodt_name}/>
+            <Image src={iprod_img} alt= {`${iprod_name}`}/>
             
             <div className="prod-details">
                <h3 id="filtername"><a href={iprod_link}>{iprod_name}</a></h3>
