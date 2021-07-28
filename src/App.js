@@ -1,5 +1,5 @@
 import React from 'react'
-import Products from './pages/Products'
+import Products from 'pages/Products'
 
 const App = () => {
 

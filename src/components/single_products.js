@@ -1,7 +1,3 @@
-// Javascript for single product page
-
-
-// ========= Product images ==============
 const the_thumbs = document.querySelectorAll(`.thumb`);
 const main_image = document.querySelector(`#main_pic`);
 
