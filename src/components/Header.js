@@ -11,8 +11,8 @@ const Header = () => {
          <img src="img/logo.png"/>
       </a>
 
-      <button type="button" class="nav-toggle">
-         <span class="material-icons">menu</span>
+      <button type="button" className="nav-toggle">
+         <span className="material-icons">menu</span>
       </button>
       <nav aria-label="Primary" className="navigation">
         <ul className="menu">
@@ -34,13 +34,13 @@ const Header = () => {
         <label htmlFor= "Filtername">Search Product Name: 
            <input type="search" name="find" id="find" placeholder="find the products" class="find"/>
         </label>
-        <button type="button"><span class="material-icons">search</span></button>
+        <button type="button"><span className="material-icons">search</span></button>
       </form>
 
       <div className="your-products">
        <ul className="header-cart">
-         <li><a href="#"><span class="material-icons" aria-label="Favourites">favorite_border</span></a></li>
-         <li><a href="#"><span class="material-icons" aria-label="Items in your cart">shopping_cart</span></a></li>
+         <li><a href="#"><span className="material-icons" aria-label="Favourites">favorite_border</span></a></li>
+         <li><a href="#"><span className="material-icons" aria-label="Items in your cart">shopping_cart</span></a></li>
        </ul>
       </div>
     </header>

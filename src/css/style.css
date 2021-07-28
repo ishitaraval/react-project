@@ -115,7 +115,7 @@ label.rating{
 .badrating{
     color: red;
 }
-.legal{
+.page-nav{
     list-style-type: none;
 }
 .filters h2{
@@ -128,22 +128,15 @@ label.rating{
     font-size: 1.2em;
 }
 
-.legal, .social{
+.page-nav{
     display: inline-flex;
     flex-wrap: wrap;
     gap: 1em;
 }
-.legal :nth-child(2) {
+.page-nav :nth-child(2) {
     padding: 0 1em;
    border-left: .2em solid var(--alt-text-color);
    border-right: .2em solid var(--alt-text-color);
- }
- .social{
-     margin-bottom: 2em;
- }
- .social{
-    justify-content:center;
-    text-align: center;
  }
 .footer-nav{
     text-align: center;
