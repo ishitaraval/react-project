@@ -21,8 +21,8 @@ const ProductRow = ({data}) => {
         }
     }
 
-    const the_s = prod_storage.map((st) => <li><label><input type="radio" name="storage" value="m" key={id}/>{st}gb</label></li>)
-    const the_c = prod_col.map((col) => <li><label><input type="radio" name="color" value="r"/>{col}</label></li>)
+    const the_s = prod_storage.map((st) => <li><label><input type="radio" name="storage" value="s" key={id}/>{st}gb</label></li>)
+    const the_c = prod_col.map((col) => <li><label><input type="radio" name="color" value="c"/>{col}</label></li>)
 
 
 
