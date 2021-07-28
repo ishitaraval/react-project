@@ -1,18 +1,20 @@
-import React from 'react'
-import Image from 'components/image'
+import React, { useState } from 'react'
+import noImg from 'img/iphone-x.jpg'
 
 const ProductRow = ({data}) => {
-  const {id, prod_img, prod_link, prod_name, prod_descrip, prod_price, prod_rating, prod_col, prod_storage} = data
+  const {id, iprod_img, iprod_link, iprod_name, iprod_descrip, iprod_price, iprod_rating, iprod_col, iprod_storage} = data
 
     const article_item = document.createElement('article')
     // Adding class name product to the article created
     article_item.classList.add('product')
 
-    
+    const [img , setImg] = useState(``)
+
+    import(`img/${iprod_img}`).then((image) => setImg(image.default))
 
     let the_r = []
     for (let x = 0; x < 5; x++) {
-        if (prod_rating > x) {
+        if (iprod_rating > x) {
             the_r.push(<span className="material-icons">star</span>)
         } else {
             the_r.push(<span className="material-icons">star_border</span>)
@@ -27,15 +29,15 @@ const ProductRow = ({data}) => {
     
     return (
         <article className="product">
-            <Image src={prod_img} alt={prod_name}/>
+            <Image src={img} alt={iprodt_name}/>
             
             <div className="prod-details">
-               <h3 id="filtername"><a href={prod_link}>{prod_name}</a></h3>
-              <data value={prod_price[1]}><del>${prod_price[0]}</del> <ins>${prod_price[1]}</ins></data>
-              <p>"${prod_descrip}."</p>
+               <h3 id="filtername"><a href={iprod_link}>{iprod_name}</a></h3>
+              <data value={iprod_price[1]}><del>${iprod_price[0]}</del> <ins>${iprod_price[1]}</ins></data>
+              <p>"${iprod_descrip}."</p>
               <dl>
                  <dt>Rating</dt>
-                     <dd>${prod_rating} <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+                     <dd>${iprod_rating} <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
                  </dl>
               <a href="#"style="color: blue; text-decoration: underline;">see more</a>
   
