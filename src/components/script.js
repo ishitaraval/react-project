@@ -94,33 +94,33 @@ let store=[]
 
  article_pro.innerHTML = 
  `<img src="img/${iproducts.iprodt_img}" alt="${iproducts.iprodt_name}">
- <div class="prod-details">
+ <div className="prod-details">
    <h3 id="filtername"><a href="${iproducts.iprodt_link}">${iproducts.iprodt_name}</a></h3>
    <data value="39"><del>$${iproducts.iprodt_price.prev}</del> <ins>${iproducts.iprodt_price.sale}</ins></data>
    <p>"${iproducts.iprodt_descrip}."</p>
   <dl>
     <dt>Rating</dt>
-    <dd>${iproducts.iprodt_ratings} <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+    <dd>${iproducts.iprodt_ratings} <span className="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
   </dl>
    <a href="#"style="color: lightseagreen; text-decoration: underline;">see more</a>
 
-   <form class="product-prop">
+   <form className="product-prop">
      <fieldset>
        <legend>Colours</legend>
-       <ul class= "radio-btn" id = "filter-color">
+       <ul className= "radio-btn" id = "filter-color">
            ${col}
        </ul>
        </fieldset>
      <fieldset>
       <legend>Storage</legend>
-      <ol class= "radio-btn" id="filter-storage">
+      <ol className= "radio-btn" id="filter-storage">
            ${store}
       </ol>
     </fieldset>
   </form>
-  <div class="prodcut-list-cart">
-    <button type="button" id="addtocart" value="addtocart"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-    <button type="button" id="fav" value="fav"><span class="material-icons">favorite</span></button>
+  <div className="prodcut-list-cart">
+    <button type="button" id="addtocart" value="addtocart"><span className="material-icons">add_shopping_cart</span> Add to Cart</button>
+    <button type="button" id="fav" value="fav"><span className="material-icons">favorite</span></button>
   </div>
   </div>
  `
