@@ -1,17 +1,3 @@
-window.onscroll = function() {myFunction()};
-
-var navbar = document.querySelector('.menu');
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-
-//  Toggle the product filters to show when button is click
 const filt_toggle = document.querySelector(`.filt-toggle`)
 const filters = document.querySelector(`.filters`)
 
