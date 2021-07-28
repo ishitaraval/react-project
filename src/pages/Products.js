@@ -88,7 +88,7 @@ return (
          <h2>Filters</h2>
 
         <div className="filter-options" id="sort">
-           <form action="" className="form-cont"></form>
+           <form action=""></form>
               <fieldset id="filter-price">
                  <p>Price:</p>
                  <input type="range" name="price" id="filterPrice" value="0" min="699.00" max="1319.00" step="1"/>
