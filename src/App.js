@@ -225,7 +225,7 @@ const App = () => {
     ]
 
     return (
-        <pages data={productAr} />
+        <Products data={productAr} />
       )
     }
     
