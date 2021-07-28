@@ -97,20 +97,20 @@ return (
               <fieldset id="filter-color" onChange={onColorChange}>
                  <legend>Colors</legend>
                  <ul class="filter-list">
-                    <li><input type="checkbox" className="check"  name="filter-col" value="black" id="black"className="checkbox.hide"/> 
-                        <label  htmlFor="black"><div className="control-check"></div>Black</label>
+                    <li><input type="checkbox" className="check"  name="filter-col" value="black" id="black"/> 
+                        <label  htmlFor="black">Black</label>
                     </li>
-                    <li><input type="checkbox" className="check"  name="filter-col" value="white" id="white"className="checkbox.hide"/> 
-                        <label htmlFor="white"><div className="control-check"></div>White</label>
+                    <li><input type="checkbox" className="check"  name="filter-col" value="white" id="white"/> 
+                        <label htmlFor="white">White</label>
                     </li>
-                    <li><input type="checkbox" className="check"  name="filter-col" value="midnightgreen" id="midnight green" className="checkbox.hide"/>
-                        <label htmlFor="midnight green"><div className="control-check"></div>Midnight green</label>
+                    <li><input type="checkbox" className="check"  name="filter-col" value="midnightgreen" id="midnight green" />
+                        <label htmlFor="midnight green">Midnight green</label>
                     </li>
-                    <li><input type="checkbox" className="check"  name="filter-col" value="pacificblue" id="pacific blue" className="checkbox.hide"/> 
-                        <label htmlFor="pacific blue"><div className="control-check"></div>pacific blue</label>
+                    <li><input type="checkbox" className="check"  name="filter-col" value="pacificblue" id="pacific blue" /> 
+                        <label htmlFor="pacific blue">pacific blue</label>
                     </li>
-                    <li><input type="checkbox" className="check"  name="filter-col" value="rosegold" id="rose gold" className="checkbox.hide"/> 
-                        <label htmlFor="rose gold"><div className="control-check"></div>Rose Gold</label>
+                    <li><input type="checkbox" className="check"  name="filter-col" value="rosegold" id="rose gold" /> 
+                        <label htmlFor="rose gold">Rose Gold</label>
                    </li>
                   </ul>
              </fieldset>
@@ -118,24 +118,24 @@ return (
                  <legend>Storage</legend>
                  <ol class="filter-list">
                      <li>
-                         <input type="checkbox" name="filter-store" value="32" id="32" className="checkbox.hide"/> 
-                        <label htmlFor="32"><div className="control-check"></div>32 gb</label>
+                         <input type="checkbox" name="filter-store" value="32" id="32" /> 
+                        <label htmlFor="32">32 gb</label>
                      </li>
                      <li>
-                         <input type="checkbox" name="filter-store" value="64" id="64" className="checkbox.hide"/> 
+                         <input type="checkbox" name="filter-store" value="64" id="64" /> 
                          <label htmlFor="64"><div className="control-check"></div>64 gb</label>
                      </li>
                      <li>
-                         <input type="checkbox" name="filter-store" value="128" id="128" className="checkbox.hide"/> 
-                         <label htmlFor="128"><div className="control-check"></div>128 gb</label>
+                         <input type="checkbox" name="filter-store" value="128" id="128" /> 
+                         <label htmlFor="128">128 gb</label>
                      </li>
                       <li>
-                         <input type="checkbox" name="filter-store" value="256" id="256" className="checkbox.hide"/> 
-                         <label htmlFor="256"><div className="control-check"></div>256 gb</label>
+                         <input type="checkbox" name="filter-store" value="256" id="256" /> 
+                         <label htmlFor="256">256 gb</label>
                       </li>
                       <li>
-                         <input type="checkbox" name="filter-store" value="512" id="512" className="checkbox.hide"/>
-                         <label htmlFor="512"><div className="control-check"></div>512 gb</label>
+                         <input type="checkbox" name="filter-store" value="512" id="512" />
+                         <label htmlFor="512">512 gb</label>
                       </li>
                  </ol>
               </fieldset>
@@ -143,31 +143,31 @@ return (
                  <legend>Ratings (above)</legend>
                  <ol className="filter-list">
                      <li>
-                          <input type="radio" name="rating" value="4" id="aboveFour" className="checkbox.hide" />
+                          <input type="radio" name="rating" value="4" id="aboveFour"  />
                           <label htmlFor="aboveFour" className="rating">
                           <span className="material-icons">star</span><span className="material-icons" >star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span>
-                          <div className="control-check"></div>
+                          
                          </label>
                      </li>
                       <li>
                           <input type="radio" name="rating" value="3" id="aboveThree" className="checkbox.hide" />
                           <label htmlFor="aboveThree" className="rating">
                           <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
-                           <div className="control-check"></div>
+                           
                          </label>
                      </li>
                       <li>
                          <input type="radio" name="rating" value="2" id="aboveTwo" className="checkbox.hide" />
                          <label htmlFor="aboveTwo" className="rating">
                          <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
-                         <div className="control-me"></div>
+                         
                          </label>
                      </li>
                      <li>
                          <input type="radio" name="rating" value="1" id="aboveOne" className="radio.hide" />
                          <label htmlFor="aboveOne" className="rating">
                           <span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
-                          <div className="control-me"></div>
+                          
                          </label>
                      </li>
                  </ol>
@@ -175,7 +175,7 @@ return (
              </div>
              <fieldset>
                  <label htmlFor="sort">Sort by</label>
-                 <select name="sort" id="sortBy" class="filter-list" onChange={handleSortChange}>
+                 <select name="sort" id="sortBy" className="filter-list" onChange={handleSortChange}>
                      <option value="0" selected>price, lowest to highest</option>
                      <option value="1">price, highest to lowest</option>
                  </select>
