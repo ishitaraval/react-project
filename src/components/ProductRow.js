@@ -29,7 +29,7 @@ const ProductRow = ({data}) => {
         <article className="product">
             <Image src={iprod_img} alt= {`${iprod_name}`}/>
             
-            <div className="prod-details">
+            <div className="product-prop">
                <h3 id="filtername"><a href={iprod_link}>{iprod_name}</a></h3>
               <data value={iprod_price[1]}><del>${iprod_price[0]}</del> <ins>${iprod_price[1]}</ins></data>
               <p>"${iprod_descrip}."</p>

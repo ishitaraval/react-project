@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import ProductRow from 'components/ProductRow'
-import { Pagination } from 'antd';
+//import { Pagination } from 'antd';
 
 
 
