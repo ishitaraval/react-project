@@ -26,7 +26,15 @@ const SearchResults = ({result}) => {
           {theProducts}
         </div>
 
-        
+        {/* <!-- Navigation Section --> */}
+        <nav aria-label="Pagination" className="pagination">
+        <p><span>Showing  </span>  
+           {theProducts.length} {(theProducts.length === 1) ? `product` : `products`} of {result.length}
+        </p>
+        <p className="pages"><Pagination defaultCurrent={currPage} total={result.length} defaultPageSize={pageSize} onChange={(page) => setCurrPage(page)}
+          
+        /></p>
+        </nav>
     </section>
   )
 }
