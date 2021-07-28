@@ -15,10 +15,11 @@ const SearchResults = ({result}) => {
 
 
     const theProducts = result.slice(startRow,endRow).map((product) => <ProductRow key={product.id} data={product} />)
-    // console.log(theProducts)
+    
+   
 
   return (
-    <section  id="productTable"className="results">
+    <section  id="productTable" className="results">
         <h2 className="subheading">Results</h2>
 
         <div id="iproducts">
