@@ -1,5 +1,296 @@
-body {
-	margin: 0;
-	background-color: lightgrey;
-	font: 1em helvetica, arial, sans-serif;
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.rating .material-icons, dd>span.material-icons {
+	color: rgb(228, 224, 22);
+
+}
+.page-header  {
+	color:var(--alt-color);
+}
+.page-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "menu-toggle cart"
+    "logo logo"
+    "pageTitle pageTitle";
+    text-align: center;
+}
+.nav-toggle{
+    grid-area: menu-toggle;
+    width: 3em;
+    justify-content: flex-start;
+}
+.radio-btn{
+    list-style-type: none;
+}
+.filter-list{
+    list-style-type: none;
+}
+.your-products{
+    grid-area: cart;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+.header-cart{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between; 
+    list-style-type: none;
+}
+.logo{
+    grid-area: logo;
+    justify-self: center;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.menu , .submenu{
+    color: white; 
+    background-color: blueviolet;
+}
+.search-bar{
+    display: block;
+}
+.header-cart, .prodcut-list-cart{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between; 
+}
+.logo{
+    width:200px;
+    justify-self: center
+}
+main{
+    display: grid;
+    padding: 0 2em 2em 2em;
+    margin-bottom: 2em;
+}
+.results{
+    padding-top: 2em;
+}
+.product{
+    margin-bottom: 3em;
+}
+ .product-prop, .product-prop fieldset> ol, .product-prop fieldset> ul , .pages{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.product-prop{
+    display: flex;
+    justify-content:flex-start;
+    margin-bottom: 1em;
+}
+.rating dd{
+    display: flex;
+    margin-left: .3em;
+}
+.rating dd p{
+    margin: 0.1em .5em 0 0;
+    color: var(--prim-text-color);
+}
+.your-products{
+    grid-area: cart;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2em;
+}
+label.rating{
+    justify-content: flex-start;
+}
+.rating {
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: .5em;
+}
+.badrating{
+    color: red;
+}
+.legal{
+    list-style-type: none;
+}
+.filters h2{
+    display: flex;
+    gap: 1em;
+    justify-content: center; 
+}
+.filters{
+    margin: .2em 0 0 0 ;
+    font-size: 1.2em;
+}
+
+.legal, .social{
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.legal :nth-child(2) {
+    padding: 0 1em;
+   border-left: .2em solid var(--alt-text-color);
+   border-right: .2em solid var(--alt-text-color);
+ }
+ .social{
+     margin-bottom: 2em;
+ }
+ .social{
+    justify-content:center;
+    text-align: center;
+ }
+.footer-nav{
+    text-align: center;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid var(--alt-text-color);
+}
+
+/* ============== start media queries ============*/
+@media only screen and (min-width: 992px){
+    body{
+        background: rgb(100, 100, 100);
+        background-image: url(../img/4153493.jpg);
+        color: white;
+    }
+    .page-header{ 
+        box-shadow:5px 5px 5px 5px rgb(228, 128, 62);  
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-areas: 
+        "search logo cart"
+        "menu menu menu"
+        "category category category";
+    }
+    .logo{
+        grid-area: logo;
+        justify-self: center
+    }
+    .navigation{
+        grid-area: menu;
+        margin: 2em 0 0 0;
+    }
+    .nav-toggle{
+        display: none;
+    }
+    .navigation ul{
+        display: flex;
+        justify-content:center;
+        /* gap: 4em; */
+    }
+    .navigation{
+        border:1px solid #ccc;
+        border-width:1px 0;
+        text-align:center;
+    }
+    .navigation ul li{
+        display:inline;
+    }
+    .navigation a{
+        display:inline-block;
+        padding:1em 4em;
+        font-size: 1.3em;
+    }
+    .navigation ul ul {
+        display:none;
+    }
+    .navigation ul ul li {
+        left:auto;  
+        margin:0; 
+        clear:left;
+        width:100%;
+    }
+    .navigation ul ul li a:hover,
+    .navigation ul li.active ul li a:hover,
+    .navigation ul li:hover ul li a:hover {
+        background:var(--btn-color); /* Sub menu items background colour */
+        color:var(--prim-text-color);
+    }
+    /* Make the sub menus appear on hover */
+    .navigation ul li:hover ul,
+    .navigation ul li.hover ul { /* This line is required for IE 6 and below */
+        background-color: var(--secondary-on);
+        position: absolute;
+        display:block;     
+    }
+    .navigation, .m-hide, .search{
+        display: block;
+    }
+    .menu>li:hover {
+        background-color:var(--secondary-on);
+    }
+    
+    .page-header, .footer{
+        padding:2em;
+        width:76em;
+        margin:0em auto;
+    }
+    .find{
+        border: 0px;
+        align-self: flex-start;
+        /* height: 2.5em; */
+    }
+    .search{
+        padding: 0;
+        border: 0;
+        /* background: var(--global-color-primary); */
+    }
+    .search{
+        background-color: white;
+    }
+    main{
+        box-shadow:5px 50px 50px 5px rgb(228, 128, 62);  
+        background-color: var(--global-color-primary);
+        padding:3em;
+        width:76em;
+        margin:0em auto;
+        padding-bottom: 2em;
+        display: grid;
+        grid-template-columns:1fr 2fr;
+        grid-template-areas:
+        "sidebar results" ;
+        /* column-gap: 2em; */
+    }
+    .search-bar{
+        display: flex;
+        justify-content: flex-start;
+        align-self: flex-end;
+        grid-area: search;
+    }
+    .sidebar, .results{
+        padding: 0 1em;
+    }
+    .results{
+        margin-left: -4em;
+    }
+    .product{
+        display: flex;
+        justify-content: space-between;
+        gap: 2em;
+    }
+    .product{
+        /* background-color: red; */
+        align-self: flex-start;
+    }
+    
+    .product img{
+        width: 250px;
+        height: 250px;
+    }
+    .page-footer{
+        background-color: var(--secondary-on);
+    }
+    .sidebar{
+        margin-top: 1em;
+        width: 20em;
+    }
+    .copyright{
+        text-align: center;
+    }
+    
 }
