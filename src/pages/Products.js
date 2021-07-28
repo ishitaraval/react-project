@@ -3,6 +3,30 @@ import Layout from 'components/Layout'
 import SearchResults from 'components/SearchResults'
 
 const Products = ({data}) => {
+  const filterPrice = document.querySelector(`#filterPrice`)
+filterPrice.addEventListener(`change`, function(event){
+  const theRange = event.target
+  const  theOutput= document.querySelector(`output[for="filterPrice"]`)
+    theOutput.textContent = theRange.value
+    const filteredproducts = productAr.filter(function(iproducts){
+       if(iproducts.iprodt_price.sale >= Number(theRange.value)){
+         return true
+       }else{
+         return false
+       }
+    })
+    setProductsTable(filteredproducts) 
+})
+
+const addToCart = document.querySelector(`#addtocart`)
+addToCart.addEventListener(`click`,function(event){
+  const whichOne = event.target
+  if(whichOne.value === `addtocart`){
+    window.confirm("Added to Cart");
+  }
+})
+
+addToCart.addEventListener(`click`, decisionMade)
 
   const [searchState, setSearchState] = useState({
     colors: [],
