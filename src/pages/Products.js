@@ -18,16 +18,6 @@ filterPrice.addEventListener(`change`, function(event){
     setProductsTable(filteredproducts) 
 })
 
-const addToCart = document.querySelector(`#addtocart`)
-addToCart.addEventListener(`click`,function(event){
-  const whichOne = event.target
-  if(whichOne.value === `addtocart`){
-    window.confirm("Added to Cart");
-  }
-})
-
-addToCart.addEventListener(`click`, decisionMade)
-
   const [searchState, setSearchState] = useState({
     colors: [],
     storage: [],
