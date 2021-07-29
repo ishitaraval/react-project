@@ -147,7 +147,7 @@ return (
                </fieldset>
               <fieldset id="rating" onChange={onRatingChange}>
                  <legend>Ratings (above)</legend>
-                   <ul className="filter-list" style={{color: rgb(228, 224, 22)}}>
+                   <ul className="filter-list" style={{color: 'lightgoldenrodyellow'}}>
                      <li>
                           <input type="radio" name="rating" value="4" id="aboveFour"  />
                           <label htmlFor="aboveFour" className="rating">
