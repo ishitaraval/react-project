@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import ProductRow from 'components/ProductRow'
-//import { Pagination } from 'antd'
-//import 'antd/dist/antd.css'
+import { Pagination } from 'antd'
+import 'antd/dist/antd.css'
 
 
 
@@ -35,15 +35,18 @@ const SearchResults = ({result}) => {
           {theProducts}
         </div>
 
-        
         <nav  className="pagination">
+        
+        
+
         <p><span>Showing  </span>  
            {theProducts.length} {(theProducts.length === 1) ? `product` : `products`} of {result.length}
            <button onClick={()=> updatePage(currPage+1)} disabled={(currPage === totalPages )?`disabled`:``} >
           <span className="material-icons">navigate_next</span>
         </button>
         </p>
-        <p className="pages"><Pagination defaultCurrent={currPage} total={result.length} defaultPageSize={pageSize} onChange={(page) => setCurrPage(page)}
+        <p className="pages">
+          <Pagination defaultCurrent={currPage} total={result.length} defaultPageSize={pageSize} onChange={(page) => setCurrPage(page)}
           
         /></p>
         </nav>
