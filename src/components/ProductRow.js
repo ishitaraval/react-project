@@ -35,7 +35,7 @@ const ProductRow = ({data}) => {
               <dl>
                  <dt>Rating</dt>
                      <dd>${iprod_rating} <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_half</span></dd>
-                 </dl>
+              </dl>
               <a href="#"style={{color: 'blue', textDecoration: 'underline'}}>see more</a>
   
              <form className="product-prop">

@@ -36,7 +36,7 @@ const SearchResults = ({result}) => {
         </div>
 
         
-         <p id="numStudents" style={{backgroundColor: `lightgreen`}}>
+         <p id="numProducts" style={{backgroundColor: `lightgreen`}}>
            <button onClick={()=> updatePage(currPage-1)} disabled={(currPage === 1 )?`disabled`:``}>
              <span className="material-icons">navigate_before</span>
            </button>
