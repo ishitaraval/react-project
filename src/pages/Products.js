@@ -3,22 +3,8 @@ import Layout from 'components/Layout'
 import SearchResults from 'components/SearchResults'
 
 const Products = ({data}) => {
-  const filterPrice = document.querySelector(`#filterPrice`)
-filterPrice.addEventListener(`change`, function(event){
-  const theRange = event.target
-  const  theOutput= document.querySelector(`output[for="filterPrice"]`)
-    theOutput.textContent = theRange.value
-    const filteredArray = data.filter(function(iproducts){
-       if(iproducts.iprodt_price.sale >= Number(theRange.value)){
-         return true
-       }else{
-         return false
-       }
-    })
-    
-})
-
   const [searchState, setSearchState] = useState({
+    minPrice: 0.0,
     colors: [],
     storage: [],
     rating: 0,
@@ -26,18 +12,31 @@ filterPrice.addEventListener(`change`, function(event){
   })
 
   // For convenience, destructure all of the values into local variables
-  const {colors, storage, rating, sort} = searchState
+  const {minPrice,colors, storage, rating, sort} = searchState
 
   // ****** FILTER ******
   // Filter the results into a new array that's the same size or smaller
-  const filteredArray = data.filter(({iprodt_ratings}) => rating == iprodt_ratings || rating === 0 ) 
-                                  .filter(({iprodt_colors}) => colors.length === 0 || 
-                                  iprodt_colors.filter((col) => colors.includes(col)).length > 0)
-                                  .filter(({iprodt_storage}) => storage.length === 0 || 
-                                  iprodt_storage.filter((store) => storage.includes(store)).length > 0) 
-                                  .sort(sort)  
+  const searchResult = data
+.filter(({price}) => price >= minPrice)
+.filter(({iprodt_ratings}) => rating == iprodt_ratings || rating === 0 ) 
+ .filter(({iprodt_colors}) => colors.length === 0 || 
+                      iprodt_colors.filter((col) => colors.includes(col)).length > 0)
+.filter(({iprodt_storage}) => storage.length === 0 || 
+                     iprodt_storage.filter((store) => storage.includes(store)).length > 0) 
+.sort(sort)  
+
+const handlePriceChange = (event) => {
+  //setMinGpa(Number(event.target.value))
+
+  setSearchState({
+    ...searchState,
+    minPrice: Number(event.target.value),
+  })
+}
 
 
+
+                                  
 const onColorChange = ({target}) => {
   if (target.checked) {
     setSearchState({
@@ -105,8 +104,8 @@ return (
            <form action=""></form>
               <fieldset id="filter-price">
                  <p>Price:</p>
-                 <input type="range" name="price" id="filterPrice" value="0" min="699.00" max="1319.00" step="1"/>
-                 <output htmlFor="filterPrice"> $0.00</output>
+                 <input type="range" name="price" id="filterPrice" value="0" min="699.00" max="1319.00" step="1"  onChange={handlePriceChange}/>
+                 <output htmlFor="filterPrice"> {minPrice.toFixed(1)}</output>
               </fieldset>
               <fieldset id="filter-color" onChange={onColorChange}>
                  <legend>Colors</legend>
@@ -197,7 +196,7 @@ return (
            </form>
        
     </aside>
- <SearchResults result={filteredArray} />
+ <SearchResults result={searchResult} />
 
  </Layout>
   )
