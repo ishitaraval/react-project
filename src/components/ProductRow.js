@@ -3,11 +3,10 @@ import Image from 'components/Image'
 
 
 const ProductRow = ({data}) => {
-  const {id, iprod_img, iprod_link, iprod_name, iprod_descrip, iprod_price, iprod_rating, iprod_col, iprod_storage} = data
+  const {id, iprod_img, iprod_link, iprod_name, iprod_descrip, iprod_price, iprod_rating} = data
 
-    const article_item = document.createElement('article')
-    // Adding class name product to the article created
-    article_item.classList.add('product')
+    const article_pro = document.createElement('article')
+    article_pro.classList.add('product')
     
 
     let the_r = []
