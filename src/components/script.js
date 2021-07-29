@@ -110,18 +110,18 @@ let store=[]
        <ul className= "radio-btn" id = "filter-color">
            ${col}
        </ul>
-       </fieldset>
-     <fieldset>
-      <legend>Storage</legend>
-      <ol className= "radio-btn" id="filter-storage">
+      </fieldset>
+      <fieldset>
+         <legend>Storage</legend>
+         <ol className= "radio-btn" id="filter-storage">
            ${store}
-      </ol>
-    </fieldset>
-  </form>
-  <div className="prodcut-list-cart">
-    <button type="button" id="addtocart" value="addtocart"><span className="material-icons">add_shopping_cart</span> Add to Cart</button>
-    <button type="button" id="fav" value="fav"><span className="material-icons">favorite</span></button>
-  </div>
+         </ol>
+       </fieldset>
+    </form>
+     <div className="product-list-cart">
+        <button type="button" id="addtocart" value="addtocart"><span className="material-icons">add_shopping_cart</span> Add to Cart</button>
+        <button type="button" id="fav" value="fav"><span className="material-icons">favorite</span></button>
+     </div>
   </div>
  `
   productsTable.appendChild(article_pro)
