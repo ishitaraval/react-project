@@ -31,12 +31,12 @@ const ProductRow = ({data}) => {
             <div className="product-prop">
                <h3 id="filtername"><a href={iprod_link}>{iprod_name}</a></h3>
               <data value={iprod_price[1]}><del>${iprod_price[0]}</del> <ins>${iprod_price[1]}</ins></data>
-              <p>"${iprod_descrip}."</p>
+              <p>"{iprod_descrip}."</p>
               <dl>
                  <dt>Rating</dt>
-                     <dd>${iprod_rating} <span className="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+                     <dd>${iprod_rating} <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_half</span></dd>
                  </dl>
-              <a href="#"style="color: blue; text-decoration: underline;">see more</a>
+              <a href="#"style={{color: 'blue', textDecoration: 'underline'}}>see more</a>
   
              <form className="product-prop">
                  <fieldset>

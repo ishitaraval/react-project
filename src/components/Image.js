@@ -3,12 +3,18 @@ import noImg from 'img/product.png'
 
 const Image = ({src,alt}) => {
     
-    const [img , setImg] = useState(``)
+   // State will hold the image url
+  const [img, setImg] = useState(``)
+  //let img = null
 
+  if (src) {
     import(`img/${src}`).then((image) => setImg(image.default))
-    return(
-        <img src={(img) ? img : noImg } alt={alt} className = "iprod_img"/>
-    )
+    //img = require(`img/${src}`).default
+  }
+
+  return (
+    <img src={(img) ? img : noImg} alt={alt} />
+  )
 }
 
 export default Image
