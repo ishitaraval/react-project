@@ -16,7 +16,7 @@ const App = () => {
            
         },
         {
-            iprodt_img: 'iphone xr.jpg',
+            iprodt_img: 'iphone-xr.jpg',
             iprodt_name: 'iPhone Xr',
             iprodt_link: 'product .html',
             iprodt_descrip: 'Here is a shot of this product that might entice a user to click and add it to their cart.',
@@ -37,7 +37,7 @@ const App = () => {
             
          },
          {
-            iprodt_img: 'iphone 11.jpg',
+            iprodt_img: 'iphone-11.jpg',
             iprodt_name: 'iPhone 11',
             iprodt_link: 'product .html',
             iprodt_descrip: 'Here is a shot of this product that might entice a user to click and add it to their cart.',
@@ -48,7 +48,7 @@ const App = () => {
             
          },
          {
-            iprodt_img: 'iphone 11pro.jpg',
+            iprodt_img: 'iphone-11pro.jpg',
             iprodt_name: 'iPhone 11pro',
             iprodt_link: 'product .html',
             iprodt_descrip: 'Here is a shot of this product that might entice a user to click and add it to their cart.',
@@ -59,7 +59,7 @@ const App = () => {
             
          },
          {
-            iprodt_img: 'iphone 12 mini.jpg',
+            iprodt_img: 'iphone-12mini.jpg',
             iprodt_name: 'iPhone 12 mini',
             iprodt_link: 'product .html',
             iprodt_descrip: 'Here is a shot of this product that might entice a user to click and add it to their cart.',
