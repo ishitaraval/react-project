@@ -16,8 +16,7 @@ const Products = ({data}) => {
 
   // ****** FILTER ******
   // Filter the results into a new array that's the same size or smaller
-  const searchResult = data
-.filter(({price}) => price >= minPrice)
+  const searchResult = data.filter(({price}) => price >= minPrice)
 .filter(({iprodt_ratings}) => rating == iprodt_ratings || rating === 0 ) 
  .filter(({iprodt_colors}) => colors.length === 0 || 
                       iprodt_colors.filter((col) => colors.includes(col)).length > 0)
@@ -186,7 +185,7 @@ return (
              <fieldset>
                  <label htmlFor="sort">Sort by</label>
                  <select name="sort" id="sortBy" className="filter-list" defaultValue="0"  onChange={handleSortChange}>
-                     <option value="0" selected>price, lowest to highest</option>
+                     <option value="0">price, lowest to highest</option>
                      <option value="1">price, highest to lowest</option>
                  </select>
               </fieldset>
