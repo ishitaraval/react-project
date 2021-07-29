@@ -102,19 +102,19 @@ return (
           <fieldset id="filter-color" onChange={onColorChange}>
             <legend>Colors</legend>
             <ul className="filter-list">
-              <li><input type="checkbox" className="check"  name="filter-col" value="black" id="blackcol" /> 
+              <li><input type="checkbox" className="check"  name="filter-col" value="black" id="blackcol"/> 
                 <label htmlFor="blackcol">Black</label>
               </li>
-              <li><input type="checkbox" className="check"  name="filter-col" value="white" id="whitecol" /> 
+              <li><input type="checkbox" className="check"  name="filter-col" value="white" id="whitecol"/> 
                 <label htmlFor="whitecol">White</label>
               </li>
-              <li><input type="checkbox" className="check"  name="filter-col" value="midnightgreen" id="midnightgreencol" />
+              <li><input type="checkbox" className="check"  name="filter-col" value="midnightgreen" id="midnightgreencol"/>
                 <label htmlFor="midnightgreencol">Midnight green</label>
               </li>
-              <li><input type="checkbox" className="check"  name="filter-col" value="pacificblue" id="pacificbluecol" /> 
+              <li><input type="checkbox" className="check"  name="filter-col" value="pacificblue" id="pacificbluecol"/> 
                 <label htmlFor="pacificbluecol">Pacific blue</label>
               </li>
-              <li><input type="checkbox" className="check"  name="filter-col" value="rosegold" id="rosegoldcol" /> 
+              <li><input type="checkbox" className="check"  name="filter-col" value="rosegold" id="rosegoldcol"/> 
                 <label htmlFor="rosegoldcol">Rose Gold</label>
               </li>
             </ul>
@@ -123,23 +123,23 @@ return (
             <legend>Storage</legend>
             <ol className="filter-list">
               <li>
-                <input type="checkbox" name="filter-store" value="32" id="32" /> 
+                <input type="checkbox" name="filter-store" value="32" id="32"/> 
                 <label htmlFor="32">32 gb</label>
               </li>
               <li>
-                <input type="checkbox" name="filter-store" value="64" id="64" /> 
+                <input type="checkbox" name="filter-store" value="64" id="64"/> 
                 <label htmlFor="64">64 gb</label>
               </li>
               <li>
-                <input type="checkbox" name="filter-store" value="128" id="128" /> 
+                <input type="checkbox" name="filter-store" value="128" id="128"/> 
                 <label htmlFor="128">128 gb</label>
               </li>
               <li>
-                <input type="checkbox" name="filter-store" value="256" id="256" /> 
+                <input type="checkbox" name="filter-store" value="256" id="256"/> 
                 <label htmlFor="256">256 gb</label>
               </li>
               <li>
-                <input type="checkbox" name="filter-store" value="512" id="512" />
+                <input type="checkbox" name="filter-store" value="512" id="512"/>
                 <label htmlFor="512">512 gb</label>
               </li>
             </ol>
@@ -148,25 +148,25 @@ return (
             <legend>Ratings (above)</legend>
            <ul className="filter-list" style={{color: 'lightgoldenrodyellow'}}>
              <li>
-               <input type="radio" name="rating" value="4" id="aboveFour"  />
+               <input type="radio" name="rating" value="4" id="aboveFour"/>
                <label htmlFor="aboveFour" className="rating">
                  <span className="material-icons">star</span><span className="material-icons" >star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span>
                </label>
              </li>
              <li>
-                <input type="radio" name="rating" value="3" id="aboveThree" />
+                <input type="radio" name="rating" value="3" id="aboveThree"/>
                 <label htmlFor="aboveThree" className="rating">
                   <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
                 </label>
              </li>
              <li>
-                <input type="radio" name="rating" value="2" id="aboveTwo"  />
+                <input type="radio" name="rating" value="2" id="aboveTwo"/>
                 <label htmlFor="aboveTwo" className="rating">
                   <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
                 </label>
              </li>
               <li>
-                <input type="radio" name="rating" value="1" id="aboveOne" />
+                <input type="radio" name="rating" value="1" id="aboveOne"/>
                 <label htmlFor="aboveOne" className="rating">
                   <span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
                 </label>
@@ -184,7 +184,7 @@ return (
            
       </form>
     </aside>
- <SearchResults result={searchResult} />
+ <SearchResults result={searchResult}/>
 
  </Layout>
   )

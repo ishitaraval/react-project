@@ -18,9 +18,9 @@ const Header = () => {
         <ul className="menu">
           <li><a href="#">Shop</a>
             <ul className="submenu">
-              <li><a href="#" style={{backgroundColor: black, color:cornflowerblue}}>iphone 12 promax</a></li>
-              <li><a href="#"  style={{backgroundColor: black, color:cornflowerblue}}>iphone 12 pro</a></li>
-              <li><a href="#" style={{backgroundColor: black, color:cornflowerblue}}>iphone 12 mini</a></li>
+              <li><a href="#" style={{backgroundColor: 'black', color:'cornflowerblue'}}>iphone 12 promax</a></li>
+              <li><a href="#"  style={{backgroundColor: 'black', color:'cornflowerblue'}}>iphone 12 pro</a></li>
+              <li><a href="#" style={{backgroundColor:'black', color:'cornflowerblue'}}>iphone 12 mini</a></li>
             </ul>
           </li>
           <li><a href="#">About</a></li>

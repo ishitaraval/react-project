@@ -53,7 +53,7 @@ const ProductRow = ({data}) => {
                  </fieldset>
              </form>
               <div className="product-list-cart">
-                  <button type="button" id="addtocart" value="addtocart"><span className="material-icons">add_shopping_cart</span> Add to Cart</button>
+                  <button type="button" id="addtocart" value="addtocart"><span className="material-icons">Add to Cart</span></button>
                  <button type="button" id="fav" value="fav"><span className="material-icons">favorite</span></button>
                </div>
            </div>
