@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import noImg from 'img/product.png'
 
 const Image = ({src,alt}) => {
-    let noImg
+    
     const [img , setImg] = useState(``)
 
     import(`img/${src}`).then((image) => setImg(image.default))
