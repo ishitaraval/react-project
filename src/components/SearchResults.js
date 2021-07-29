@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import ProductRow from 'components/ProductRow'
-//import { Pagination } from 'antd';
+import { Pagination } from 'antd'
+import 'antd/dist/antd.css'
+
 
 
 
@@ -16,7 +18,14 @@ const SearchResults = ({result}) => {
 
     const theProducts = result.slice(startRow,endRow).map((product) => <ProductRow key={product.id} data={product} />)
     
-   
+    const updatePage = (page) => {
+      if (page < 0) 
+        setCurrPage(1)
+      else if (page > totalPages) 
+        setCurrPage(totalPages)
+      else 
+        setCurrPage(page)
+    }
 
   return (
     <section  id="productTable" className="results">
@@ -26,10 +35,13 @@ const SearchResults = ({result}) => {
           {theProducts}
         </div>
 
-        {/* <!-- Navigation Section --> */}
-        <nav aria-label="Pagination" className="pagination">
+        
+        <nav  className="pagination">
         <p><span>Showing  </span>  
            {theProducts.length} {(theProducts.length === 1) ? `product` : `products`} of {result.length}
+           <button onClick={()=> updatePage(currPage+1)} disabled={(currPage === totalPages )?`disabled`:``} >
+          <span className="material-icons">navigate_next</span>
+        </button>
         </p>
         <p className="pages"><Pagination defaultCurrent={currPage} total={result.length} defaultPageSize={pageSize} onChange={(page) => setCurrPage(page)}
           
