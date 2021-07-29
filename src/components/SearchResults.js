@@ -36,12 +36,12 @@ const SearchResults = ({result}) => {
         </div>
 
         <nav  className="pagination">
-        
-        
-
-        <p><span>Showing  </span>  
-           {theProducts.length} {(theProducts.length === 1) ? `product` : `products`} of {result.length}
-           <button onClick={()=> updatePage(currPage+1)} disabled={(currPage === totalPages )?`disabled`:``} >
+        <p id="numStudents" style={{backgroundColor: `lightgreen`}}>
+        <button onClick={()=> updatePage(currPage-1)} disabled={(currPage === 1 )?`disabled`:``}>
+          <span className="material-icons">navigate_before</span>
+        </button>
+        Showing {(theProducts.length === 1) ? `product` : `products`} {startRow + 1} to {Math.min(endRow, result.length)} of {result.length}
+        <button onClick={()=> updatePage(currPage+1)} disabled={(currPage === totalPages )?`disabled`:``} >
           <span className="material-icons">navigate_next</span>
         </button>
         </p>
