@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import noImg from 'img/product.png'
+import noImg from 'img/product.svg'
 
 const Image = ({src,alt}) => {
     

@@ -29,25 +29,24 @@ const SearchResults = ({result}) => {
 
   return (
     <section  id="productTable" className="results">
-        <h2 className="subheading">Results</h2>
+      <h2 style= {{color:'white', textAlign: 'center'}}>Results</h2>
 
-        <div id="iproducts">
-          {theProducts}
-        </div>
-
-        
-         <p id="numProducts" style={{backgroundColor: `lightgreen`}}>
-           <button onClick={()=> updatePage(currPage-1)} disabled={(currPage === 1 )?`disabled`:``}>
-             <span className="material-icons">navigate_before</span>
-           </button>
-            Showing {(theProducts.length === 1) ? `product` : `products`} {startRow + 1} to {Math.min(endRow, result.length)} of {result.length}
-           <button onClick={()=> updatePage(currPage+1)} disabled={(currPage === totalPages )?`disabled`:``} >
-             <span className="material-icons">navigate_next</span>
-           </button>
-         </p>
-         <p className="numpage">
-           <Pagination defaultCurrent={currPage} total={result.length} defaultPageSize={pageSize} onChange={(page) => setCurrPage(page)}/>
-         </p>
+      <div id="iproducts">
+        {(theProducts.length) ? theProducts : `No matching productss`}
+      </div>
+      
+      <p id="numProducts" style={{backgroundColor: `lightgreen`}}>
+       <button onClick={()=> updatePage(currPage-1)} disabled={(currPage === 1 )?`disabled`:``}>
+         <span className="material-icons">navigate_before</span>
+       </button>
+       Showing {(theProducts.length === 1) ? `product` : `products`} {startRow + 1} to {Math.min(endRow, result.length)} of {result.length}
+        <button onClick={()=> updatePage(currPage+1)} disabled={(currPage === totalPages )?`disabled`:``} >
+          <span className="material-icons">navigate_next</span>
+        </button>
+      </p>
+      <p className="numpage">
+        <Pagination defaultCurrent={currPage} total={result.length} defaultPageSize={pageSize} onChange={(page) => setCurrPage(page)}/>
+      </p>
         
     </section>
   )
