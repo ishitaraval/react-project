@@ -8,19 +8,19 @@ const Header = () => {
 
     <header className="page-header">
       <a href="index.html" className="logo">
-         <img src="img/logo.png"/>
+       <img src="img/logo.png"/>
       </a>
 
       <button type="button" className="nav-toggle">
-         <span className="material-icons">menu</span>
+        <span className="material-icons">menu</span>
       </button>
       <nav aria-label="Primary" className="navigation">
         <ul className="menu">
           <li><a href="#">Shop</a>
             <ul className="submenu">
-              <li><a href="#" style="background-color: black; color:cornflowerblue;">iphone 12 promax</a></li>
-              <li><a href="#"  style="background-color: black; color:cornflowerblue;">iphone 12 pro</a></li>
-              <li><a href="#" style="background-color: black; color:cornflowerblue;">iphone 12 mini</a></li>
+              <li><a href="#" style={{backgroundColor: black, color:cornflowerblue}}>iphone 12 promax</a></li>
+              <li><a href="#"  style={{backgroundColor: black, color:cornflowerblue}}>iphone 12 pro</a></li>
+              <li><a href="#" style={{backgroundColor: black, color:cornflowerblue}}>iphone 12 mini</a></li>
             </ul>
           </li>
           <li><a href="#">About</a></li>
@@ -30,9 +30,9 @@ const Header = () => {
       </nav>
 
       
-      <form className="searchbar m-hide">
+      <form className="searchbar">
         <label htmlFor= "Filtername">Search Product Name: 
-           <input type="search" name="find" id="find" placeholder="find the products" class="find"/>
+          <input type="search" name="find" id="find" placeholder="find the products" class="find"/>
         </label>
         <button type="button"><span className="material-icons">search</span></button>
       </form>

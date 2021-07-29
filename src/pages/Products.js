@@ -93,100 +93,97 @@ return (
   <aside className="sidebar">
      <form className="filters">
        <h2>Filters</h2>
-       <div className="filter-options" id="sort">
-          <form action="" className="form-content"></form>
-              <fieldset id="filter-price">
-                 <p>Price:</p>
-                 <input type="range" name="price" id="filterPrice" value={minPrice} min="699.00" max="1319.00" step="1"  onChange={handlePriceChange}/>
-                 <output htmlFor="filterPrice"> {minPrice.toFixed(1)}</output>
-              </fieldset>
-              <fieldset id="filter-color" onChange={onColorChange}>
-                 <legend>Colors</legend>
-                  <ul className="filter-list">
-                     <li><input type="checkbox" className="check"  name="filter-col" value="black" id="black"/> 
-                         <label  htmlFor="black">Black</label>
-                     </li>
-                      <li><input type="checkbox" className="check"  name="filter-col" value="white" id="white"/> 
-                         <label htmlFor="white">White</label>
-                     </li>
-                     <li><input type="checkbox" className="check"  name="filter-col" value="midnightgreen" id="midnight green" />
-                         <label htmlFor="midnight green">Midnight green</label>
-                     </li>
-                     <li><input type="checkbox" className="check"  name="filter-col" value="pacificblue" id="pacific blue" /> 
-                         <label htmlFor="pacific blue">pacific blue</label>
-                     </li>
-                     <li><input type="checkbox" className="check"  name="filter-col" value="rosegold" id="rose gold" /> 
-                         <label htmlFor="rose gold">Rose Gold</label>
-                     </li>
-                   </ul>
-               </fieldset>
-              <fieldset id="filter-storage"  onChange={onStorageChange}>
-                 <legend>Storage</legend>
-                   <ol className="filter-list">
-                     <li>
-                         <input type="checkbox" name="filter-store" value="32" id="32" /> 
-                         <label htmlFor="32">32 gb</label>
-                     </li>
-                     <li>
-                         <input type="checkbox" name="filter-store" value="64" id="64" /> 
-                         <label htmlFor="64"><div className="control-check"></div>64 gb</label>
-                     </li>
-                     <li>
-                         <input type="checkbox" name="filter-store" value="128" id="128" /> 
-                         <label htmlFor="128">128 gb</label>
-                     </li>
-                      <li>
-                         <input type="checkbox" name="filter-store" value="256" id="256" /> 
-                         <label htmlFor="256">256 gb</label>
-                      </li>
-                      <li>
-                         <input type="checkbox" name="filter-store" value="512" id="512" />
-                         <label htmlFor="512">512 gb</label>
-                      </li>
-                   </ol>
-               </fieldset>
-              <fieldset id="rating" onChange={onRatingChange}>
-                 <legend>Ratings (above)</legend>
-                   <ul className="filter-list" style={{color: 'lightgoldenrodyellow'}}>
-                     <li>
-                          <input type="radio" name="rating" value="4" id="aboveFour"  />
-                          <label htmlFor="aboveFour" className="rating">
-                             <span className="material-icons">star</span><span className="material-icons" >star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span>
-                          </label>
-                     </li>
-                      <li>
-                          <input type="radio" name="rating" value="3" id="aboveThree" />
-                          <label htmlFor="aboveThree" className="rating">
-                             <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
-                           </label>
-                     </li>
-                      <li>
-                         <input type="radio" name="rating" value="2" id="aboveTwo"  />
-                         <label htmlFor="aboveTwo" className="rating">
-                             <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
-                         </label>
-                     </li>
-                     <li>
-                         <input type="radio" name="rating" value="1" id="aboveOne" />
-                         <label htmlFor="aboveOne" className="rating">
-                          <span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
-                          
-                         </label>
-                     </li>
-                   </ul>
-               </fieldset>
-        </div>
-         <fieldset>
-              <label htmlFor="sort">Sort by</label>
-              <select name="sort" id="sortBy" className="filter-list" defaultValue="0"  onChange={handleSortChange}>
-                     <option value="0">price, lowest to highest</option>
-                     <option value="1">price, highest to lowest</option>
-              </select>
-         </fieldset>
+       <div className="filter-options">
+          <fieldset id="filter-price">
+            <p>Price:</p>
+            <input type="range" name="price" id="filterPrice" value={minPrice} min="699.00" max="1319.00" step="1"  onChange={handlePriceChange}/>
+            <output htmlFor="filterPrice"> {minPrice.toFixed(1)}</output>
+          </fieldset>
+          <fieldset id="filter-color" onChange={onColorChange}>
+            <legend>Colors</legend>
+            <ul className="filter-list">
+              <li><input type="checkbox" className="check"  name="filter-col" value="black" id="blackcol" /> 
+                <label htmlFor="blackcol">Black</label>
+              </li>
+              <li><input type="checkbox" className="check"  name="filter-col" value="white" id="whitecol" /> 
+                <label htmlFor="whitecol">White</label>
+              </li>
+              <li><input type="checkbox" className="check"  name="filter-col" value="midnightgreen" id="midnightgreencol" />
+                <label htmlFor="midnightgreencol">Midnight green</label>
+              </li>
+              <li><input type="checkbox" className="check"  name="filter-col" value="pacificblue" id="pacificbluecol" /> 
+                <label htmlFor="pacificbluecol">Pacific blue</label>
+              </li>
+              <li><input type="checkbox" className="check"  name="filter-col" value="rosegold" id="rosegoldcol" /> 
+                <label htmlFor="rosegoldcol">Rose Gold</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset id="filter-storage"  onChange={onStorageChange}>
+            <legend>Storage</legend>
+            <ol className="filter-list">
+              <li>
+                <input type="checkbox" name="filter-store" value="32" id="32" /> 
+                <label htmlFor="32">32 gb</label>
+              </li>
+              <li>
+                <input type="checkbox" name="filter-store" value="64" id="64" /> 
+                <label htmlFor="64">64 gb</label>
+              </li>
+              <li>
+                <input type="checkbox" name="filter-store" value="128" id="128" /> 
+                <label htmlFor="128">128 gb</label>
+              </li>
+              <li>
+                <input type="checkbox" name="filter-store" value="256" id="256" /> 
+                <label htmlFor="256">256 gb</label>
+              </li>
+              <li>
+                <input type="checkbox" name="filter-store" value="512" id="512" />
+                <label htmlFor="512">512 gb</label>
+              </li>
+            </ol>
+          </fieldset>
+          <fieldset id="rating" onChange={onRatingChange}>
+            <legend>Ratings (above)</legend>
+           <ul className="filter-list" style={{color: 'lightgoldenrodyellow'}}>
+             <li>
+               <input type="radio" name="rating" value="4" id="aboveFour"  />
+               <label htmlFor="aboveFour" className="rating">
+                 <span className="material-icons">star</span><span className="material-icons" >star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span>
+               </label>
+             </li>
+             <li>
+                <input type="radio" name="rating" value="3" id="aboveThree" />
+                <label htmlFor="aboveThree" className="rating">
+                  <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
+                </label>
+             </li>
+             <li>
+                <input type="radio" name="rating" value="2" id="aboveTwo"  />
+                <label htmlFor="aboveTwo" className="rating">
+                  <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
+                </label>
+             </li>
+              <li>
+                <input type="radio" name="rating" value="1" id="aboveOne" />
+                <label htmlFor="aboveOne" className="rating">
+                  <span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+       </div>
+        <fieldset>
+          <label htmlFor="sort">Sort by</label>
+          <select name="sort" id="sortBy" className="filter-list" defaultValue="0"  onChange={handleSortChange}>
+            <option value="0">price, lowest to highest</option>
+            <option value="1">price, highest to lowest</option>
+          </select>
+        </fieldset>
            
-    </form>
-       
-</aside>
+      </form>
+    </aside>
  <SearchResults result={searchResult} />
 
  </Layout>
