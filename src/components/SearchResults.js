@@ -10,7 +10,7 @@ const SearchResults = ({result}) => {
 
 
   const [currPage, setCurrPage] = useState(1)
-  const pageSize = 3
+  const pageSize = 6
   const startRow = (currPage - 1) * pageSize
   const endRow = startRow + pageSize
   const totalPages = Math.ceil(result.length / pageSize)
