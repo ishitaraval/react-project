@@ -26,9 +26,7 @@ const Products = ({data}) => {
 .sort(sort)  
 
 const handlePriceChange = (event) => {
-  //setMinGpa(Number(event.target.value))
-
-  setSearchState({
+   setSearchState({
     ...searchState,
     minPrice: Number(event.target.value),
   })
@@ -52,18 +50,17 @@ const onColorChange = ({target}) => {
 }  
 
 const onStorageChange = ({target}) => {
-    const st = parseInt(target.value)
+    
   if (target.checked) {
     setSearchState({
       ...searchState,
-      storage: [...searchState.storage, st]
+      storage: [...searchState.storage, target.value]
     })
     console.log(storage)
   } else {
-    console.log(`nothing`)
     setSearchState({
       ...searchState,
-      storage: searchState.weight.filter((store) => store !== st)
+      storage: searchState.storage.filter((store) => store !== target.value)
     })
   }
 }  
@@ -104,7 +101,7 @@ return (
            <form action=""></form>
               <fieldset id="filter-price">
                  <p>Price:</p>
-                 <input type="range" name="price" id="filterPrice" value="0" min="699.00" max="1319.00" step="1"  onChange={handlePriceChange}/>
+                 <input type="range" name="price" id="filterPrice" value={minPrice} min="699.00" max="1319.00" step="1"  onChange={handlePriceChange}/>
                  <output htmlFor="filterPrice"> {minPrice.toFixed(1)}</output>
               </fieldset>
               <fieldset id="filter-color" onChange={onColorChange}>
@@ -131,23 +128,23 @@ return (
                  <legend>Storage</legend>
                  <ol className="filter-list">
                      <li>
-                         <input type="checkbox" name="filter-store" value="32" id="32" /> 
+                         <input type="checkbox" name="filter-store" value="32" id="filter32" /> 
                         <label htmlFor="32">32 gb</label>
                      </li>
                      <li>
-                         <input type="checkbox" name="filter-store" value="64" id="64" /> 
+                         <input type="checkbox" name="filter-store" value="64" id="filter64" /> 
                          <label htmlFor="64"><div className="control-check"></div>64 gb</label>
                      </li>
                      <li>
-                         <input type="checkbox" name="filter-store" value="128" id="128" /> 
+                         <input type="checkbox" name="filter-store" value="128" id="filter128" /> 
                          <label htmlFor="128">128 gb</label>
                      </li>
                       <li>
-                         <input type="checkbox" name="filter-store" value="256" id="256" /> 
+                         <input type="checkbox" name="filter-store" value="256" id="filter256" /> 
                          <label htmlFor="256">256 gb</label>
                       </li>
                       <li>
-                         <input type="checkbox" name="filter-store" value="512" id="512" />
+                         <input type="checkbox" name="filter-store" value="512" id="filter512" />
                          <label htmlFor="512">512 gb</label>
                       </li>
                  </ol>
@@ -188,7 +185,7 @@ return (
              </div>
              <fieldset>
                  <label htmlFor="sort">Sort by</label>
-                 <select name="sort" id="sortBy" className="filter-list" onChange={handleSortChange}>
+                 <select name="sort" id="sortBy" className="filter-list" defaultValue="0"  onChange={handleSortChange}>
                      <option value="0" selected>price, lowest to highest</option>
                      <option value="1">price, highest to lowest</option>
                  </select>
