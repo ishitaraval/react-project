@@ -96,7 +96,7 @@ return (
        <form className="filters">
          <h2>Filters</h2>
 
-        <div className="filter-options" id="sort">
+         <div className="filter-options" id="sort">
            <form action=""></form>
               <fieldset id="filter-price">
                  <p>Price:</p>
@@ -189,7 +189,8 @@ return (
                      <option value="1">price, highest to lowest</option>
                  </select>
               </fieldset>
-           </form>
+           
+        </form>
        
     </aside>
  <SearchResults result={searchResult} />

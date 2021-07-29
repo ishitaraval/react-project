@@ -35,21 +35,20 @@ const SearchResults = ({result}) => {
           {theProducts}
         </div>
 
-        <nav  className="pagination">
-        <p id="numStudents" style={{backgroundColor: `lightgreen`}}>
-        <button onClick={()=> updatePage(currPage-1)} disabled={(currPage === 1 )?`disabled`:``}>
-          <span className="material-icons">navigate_before</span>
-        </button>
-        Showing {(theProducts.length === 1) ? `product` : `products`} {startRow + 1} to {Math.min(endRow, result.length)} of {result.length}
-        <button onClick={()=> updatePage(currPage+1)} disabled={(currPage === totalPages )?`disabled`:``} >
-          <span className="material-icons">navigate_next</span>
-        </button>
-        </p>
-        <p className="pages">
-          <Pagination defaultCurrent={currPage} total={result.length} defaultPageSize={pageSize} onChange={(page) => setCurrPage(page)}
-          
-        /></p>
-        </nav>
+        
+         <p id="numStudents" style={{backgroundColor: `lightgreen`}}>
+           <button onClick={()=> updatePage(currPage-1)} disabled={(currPage === 1 )?`disabled`:``}>
+             <span className="material-icons">navigate_before</span>
+           </button>
+            Showing {(theProducts.length === 1) ? `product` : `products`} {startRow + 1} to {Math.min(endRow, result.length)} of {result.length}
+           <button onClick={()=> updatePage(currPage+1)} disabled={(currPage === totalPages )?`disabled`:``} >
+             <span className="material-icons">navigate_next</span>
+           </button>
+         </p>
+         <p className="numpage">
+           <Pagination defaultCurrent={currPage} total={result.length} defaultPageSize={pageSize} onChange={(page) => setCurrPage(page)}/>
+         </p>
+        
     </section>
   )
 }

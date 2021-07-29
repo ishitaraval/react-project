@@ -78,7 +78,7 @@ main{
 .product{
     margin-bottom: 3em;
 }
- .product-prop, .product-prop fieldset> ol, .product-prop fieldset> ul , .pages{
+ .product-prop, .product-prop fieldset> ol, .product-prop fieldset> ul , .numpage{
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
