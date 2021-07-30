@@ -89,8 +89,7 @@ const handleSortChange = ({target}) => {
 
 return (
  <Layout>
-  
-  <aside className="sidebar">
+   <aside className="sidebar">
      <form className="filters">
        <h2 style = {{color: 'white', textAlign: 'center'}}>Filters</h2>
        <div className="filter-options">
@@ -145,29 +144,29 @@ return (
             </ol>
           </fieldset>
           <fieldset id="rating" onChange={onRatingChange}>
-            <legend>Ratings (above)</legend>
+            <legend>Ratings</legend>
            <ul className="filter-list" style={{color: 'lightgoldenrodyellow'}}>
              <li>
-               <input type="radio" name="rating" value="4" id="aboveFour"/>
-               <label htmlFor="aboveFour" className="rating">
+               <input type="radio" name="rating" value="4" id="four"/>
+               <label htmlFor="four" className="rating">
                  <span className="material-icons">star</span><span className="material-icons" >star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span>
                </label>
              </li>
              <li>
-                <input type="radio" name="rating" value="3" id="aboveThree"/>
-                <label htmlFor="aboveThree" className="rating">
+                <input type="radio" name="rating" value="3" id="three"/>
+                <label htmlFor="three" className="rating">
                   <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
                 </label>
              </li>
              <li>
-                <input type="radio" name="rating" value="2" id="aboveTwo"/>
-                <label htmlFor="aboveTwo" className="rating">
+                <input type="radio" name="rating" value="2" id="two"/>
+                <label htmlFor="two" className="rating">
                   <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
                 </label>
              </li>
               <li>
-                <input type="radio" name="rating" value="1" id="aboveOne"/>
-                <label htmlFor="aboveOne" className="rating">
+                <input type="radio" name="rating" value="1" id="one"/>
+                <label htmlFor="one" className="rating">
                   <span className="material-icons">star</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span><span className="material-icons">star_border</span>
                 </label>
               </li>
@@ -184,8 +183,7 @@ return (
            
       </form>
     </aside>
- <SearchResults result={searchResult}/>
-
+    <SearchResults result={searchResult}/>
  </Layout>
   )
 }

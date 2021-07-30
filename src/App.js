@@ -1,7 +1,7 @@
 import React from 'react'
 //import 'material-design-icons/iconfont/material-icons.css'
-import FourOhFour from 'pages/FourOhFour'
 import Products from 'pages/Products'
+import FourOhFour from 'pages/FourOhFour'
 
 
 const App = () => {

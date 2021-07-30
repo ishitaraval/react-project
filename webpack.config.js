@@ -38,12 +38,12 @@ module.exports = {
 	output: {
 		publicPath: `auto`
 	},
-    resolve: {
-        alias: {
-            components: path.resolve(__dirname, 'src/components/'),
-			pages: path.resolve(__dirname, 'src/pages/'),
-            css: path.resolve(__dirname, 'src/css/'),
-            img: path.resolve(__dirname, 'src/img/'),
-        }
-    }
+	resolve: {
+		alias: {
+		  components: path.resolve(__dirname, 'src/components/'),
+		  pages: path.resolve(__dirname, 'src/pages/'),
+		  css: path.resolve(__dirname, 'src/css/'),
+		  img: path.resolve(__dirname, 'src/img/'),
+		}
+	  }
 }
