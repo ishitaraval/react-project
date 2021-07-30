@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from 'img/logo.png';
+import logo from 'img/logo.png'
 
 const Header = () => {
 
@@ -8,7 +8,7 @@ const Header = () => {
 
     <header className="page-header">
       <a href="index.html" className="logo">
-       <img src="img/logo.png"/>
+       <img src= {logo}/>
       </a>
 
       <button type="button" className="nav-toggle">
