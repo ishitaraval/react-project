@@ -8,15 +8,14 @@ import 'antd/dist/antd.css'
 
 const SearchResults = ({result}) => {
 
-
   const [currPage, setCurrPage] = useState(1)
-  const pageSize = 6
+  const pageSize = 3
+
   const startRow = (currPage - 1) * pageSize
   const endRow = startRow + pageSize
   const totalPages = Math.ceil(result.length / pageSize)
 
-
-    const theProducts = result.slice(startRow,endRow).map((product) => <ProductRow key={product.id} data={product} />)
+  const theProducts = result.slice(startRow,endRow).map((product) => <ProductRow key={product.id} data={product} />)
     
     const updatePage = (page) => {
       if (page < 0) 
@@ -28,11 +27,11 @@ const SearchResults = ({result}) => {
     }
 
   return (
-    <section  id="productTable" className="results">
+    <div id="productTable" className="results" style={{backgroundColor: 'lightsteelblue', padding: `1em`}}>
       <h2 style= {{color:'white', textAlign: 'center'}}>Results</h2>
-
-      <div id="iproducts">
-        {(theProducts.length) ? theProducts : `No matching productss`}
+      
+      <div id="iproducts" className="Records">
+        {(theProducts.length) ? theProducts : `No matching products`}
       </div>
       
       <p id="numProducts" style={{backgroundColor: `lightgreen`}}>
@@ -44,11 +43,11 @@ const SearchResults = ({result}) => {
           <span className="material-icons">navigate_next</span>
         </button>
       </p>
-      <p className="numpage">
+      
         <Pagination defaultCurrent={currPage} total={result.length} defaultPageSize={pageSize} onChange={(page) => setCurrPage(page)}/>
-      </p>
+      
         
-    </section>
+    </div>
   )
 }
 

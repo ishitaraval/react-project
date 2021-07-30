@@ -134,7 +134,7 @@ catch(err) {
   
 }
      
- 
+
 setProductsTable(productAr)
 
 const filterPrice = document.querySelector(`#filterPrice`)

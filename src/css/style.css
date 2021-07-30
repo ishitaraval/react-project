@@ -15,7 +15,7 @@
     grid-template-areas: 
     "menu-toggle cart"
     "logo logo"
-    "pageTitle pageTitle";
+    "results results";
     text-align: center;
 }
 .nav-toggle{
@@ -127,6 +127,10 @@ label.rating{
     margin: .2em 0 0 0 ;
     font-size: 1.2em;
 }
+.records {
+    padding-left: 0;
+    list-style-type: none;
+  }
 
 .page-nav{
     display: inline-flex;
@@ -201,17 +205,17 @@ label.rating{
     .navigation ul ul li a:hover,
     .navigation ul li.active ul li a:hover,
     .navigation ul li:hover ul li a:hover {
-        background:var(--btn-color); /* Sub menu items background colour */
+        background:var(--btn-color); 
         color:var(--prim-text-color);
     }
-    /* Make the sub menus appear on hover */
+    
     .navigation ul li:hover ul,
-    .navigation ul li.hover ul { /* This line is required for IE 6 and below */
+    .navigation ul li.hover ul { 
         background-color: var(--secondary-on);
         position: absolute;
         display:block;     
     }
-    .navigation, .m-hide, .search{
+    .navigation, .search{
         display: block;
     }
     .menu>li:hover {
@@ -226,12 +230,12 @@ label.rating{
     .find{
         border: 0px;
         align-self: flex-start;
-        /* height: 2.5em; */
+        
     }
     .search{
         padding: 0;
         border: 0;
-        /* background: var(--global-color-primary); */
+        
     }
     .search{
         background-color: white;
@@ -247,7 +251,7 @@ label.rating{
         grid-template-columns:1fr 2fr;
         grid-template-areas:
         "sidebar results" ;
-        /* column-gap: 2em; */
+        
     }
     .search-bar{
         display: flex;

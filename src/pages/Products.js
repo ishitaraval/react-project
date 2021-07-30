@@ -17,11 +17,11 @@ const Products = ({data}) => {
   // ****** FILTER ******
   // Filter the results into a new array that's the same size or smaller
   const searchResult = data.filter(({price}) => price >= minPrice)
-.filter(({iprodt_ratings}) => rating == iprodt_ratings || rating === 0 ) 
- .filter(({iprodt_colors}) => colors.length === 0 || 
-                      iprodt_colors.filter((col) => colors.includes(col)).length > 0)
-.filter(({iprodt_storage}) => storage.length === 0 || 
-                     iprodt_storage.filter((store) => storage.includes(store)).length > 0) 
+.filter(({ratingsSelected}) => rating == ratingsSelected || rating === 0 ) 
+ .filter(({colorsSelected}) => colors.length === 0 || 
+                      colorsSelected.filter((col) => colors.includes(col)).length > 0)
+.filter(({storageSelected}) => storage.length === 0 || 
+                     storageSelected.filter((store) => storage.includes(store)).length > 0) 
 .sort(sort)  
 
 const handlePriceChange = (event) => {
@@ -43,7 +43,7 @@ const onColorChange = ({target}) => {
   } else {
     setSearchState({
       ...searchState,
-      colors: searchState.catergories.filter((color) => color !== target.value)
+      colors: searchState.colors.filter((color) => color !== target.value)
     })
   }
 }  
@@ -76,9 +76,9 @@ const onRatingChange = (event) => {
 const handleSortChange = ({target}) => {
   let sorting
   if (target.value === "0") {
-    sorting = (a, b) => a.iprodt_price[1] - b.iprodt_price[1]
+    sorting = (a, b) => a.price[1] - b.price[1]
   } else if (target.value === "1") {
-    sorting = (a, b) => b.iprodt_price[1] - a.iprodt_price[1]
+    sorting = (a, b) => b.price[1] - a.price[1]
   }
 
   setSearchState({
@@ -92,7 +92,7 @@ return (
   
   <aside className="sidebar">
      <form className="filters">
-       <h2>Filters</h2>
+       <h2 style = {{color: 'white', textAlign: 'center'}}>Filters</h2>
        <div className="filter-options">
           <fieldset id="filter-price">
             <p>Price:</p>
@@ -175,10 +175,10 @@ return (
           </fieldset>
        </div>
         <fieldset>
-          <label htmlFor="sort">Sort by</label>
+          <label htmlFor="sort">Sort by: </label>
           <select name="sort" id="sortBy" className="filter-list" defaultValue="0"  onChange={handleSortChange}>
-            <option value="0">price, lowest to highest</option>
-            <option value="1">price, highest to lowest</option>
+            <option value="0" style={{color:'black'}}>price, lowest to highest</option>
+            <option value="1" style={{color:'black'}}>price, highest to lowest</option>
           </select>
         </fieldset>
            

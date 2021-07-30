@@ -25,7 +25,7 @@ const ProductRow = ({data}) => {
 
     
     return (
-        <article className="products">
+        <article className="product">
             <Image src={iprod_img} alt= {`${iprod_name}`}/>
             
             <div className="product-prop">
