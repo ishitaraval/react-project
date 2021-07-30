@@ -1,5 +1,5 @@
 import React from 'react'
-//import 'material-design-icons/iconfont/material-icons.css'
+import 'material-design-icons/iconfont/material-icons.css'
 import Products from 'pages/Products'
 import FourOhFour from 'pages/FourOhFour'
 
