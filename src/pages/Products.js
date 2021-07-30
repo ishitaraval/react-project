@@ -8,7 +8,7 @@ const Products = ({data}) => {
     colors: [],
     storage: [],
     rating: 0,
-    sort: (a, b) => a.iprodt_price[1] - b.iprodt_price[1]
+    sort: (a, b) => a.price[1] - b.price[1]
   })
 
   // For convenience, destructure all of the values into local variables
