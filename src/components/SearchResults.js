@@ -30,9 +30,10 @@ const SearchResults = ({result}) => {
     <div id="productTable" className="results" style={{backgroundColor: 'lightsteelblue', padding: `1em`}}>
       <h2 style= {{color:'white', textAlign: 'center'}}>Results</h2>
       
-      <div id="iproducts" className="Records">
+      <div id="iproducts">
         {(theProducts.length) ? theProducts : `No matching products`}
       </div>
+
       
       <p id="numProducts" style={{backgroundColor: `lightgreen`}}>
        <button onClick={()=> updatePage(currPage-1)} disabled={(currPage === 1 )?`disabled`:``}>
@@ -44,7 +45,7 @@ const SearchResults = ({result}) => {
         </button>
       </p>
       
-        <Pagination defaultCurrent={currPage} total={result.length} defaultPageSize={pageSize} onChange={(page) => setCurrPage(page)}/>
+      <Pagination current={currPage} total={result.length} defaultPageSize={pageSize} onChange={(page) => setCurrPage(page)} />
       
         
     </div>
