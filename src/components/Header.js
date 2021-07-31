@@ -32,7 +32,7 @@ const Header = () => {
       
       <form className="searchbar">
         <label htmlFor= "Filtername">Search Product Name: 
-          <input type="search" name="find" id="find" placeholder="find the products" class="find"/>
+          <input type="search" name="find" id="find" placeholder="find the products" className="find"/>
         </label>
         <button type="button"><span className="material-icons">search</span></button>
       </form>
