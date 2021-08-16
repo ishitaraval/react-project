@@ -101,7 +101,7 @@ return (
             <output htmlFor="filterPrice" style={{fontSize: '1.2em'}}> {minPrice.toFixed(1)}</output>
           </fieldset>
           <fieldset id="filter-color" onChange={onColorChange}>
-            <legend>Colors</legend>
+            <legend>Colors:</legend>
             <ul className="filter-list">
               <li><input type="checkbox" className="check"  name="filter-col" value="black" id="blackcol"/> 
                 <label htmlFor="blackcol">Black</label>
@@ -120,9 +120,9 @@ return (
               </li>
             </ul>
           </fieldset>
-          <fieldset id="filter-storage"  onChange={onStorageChange}>
-            <legend>Storage</legend>
-            <ol className="filter-list">
+          <fieldset id="filter-storage"  onChange={onStorageChange} >
+            <legend>Storage:</legend>
+            <ol className="filter-list" >
               <li>
                 <input type="checkbox" name="filter-store" value="32" id="32"/> 
                 <label htmlFor="32">32 gb</label>
@@ -146,7 +146,7 @@ return (
             </ol>
           </fieldset>
           <fieldset id="rating" onChange={onRatingChange}>
-            <legend>Ratings</legend>
+            <legend>Ratings:</legend>
            <ul className="filter-list" style={{color: 'lightgoldenrodyellow'}}>
              <li>
                <input type="radio" name="rating" value="4" id="four"/>

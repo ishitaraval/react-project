@@ -9,7 +9,7 @@ import 'antd/dist/antd.css'
 const SearchResults = ({result}) => {
 
   const [currPage, setCurrPage] = useState(1)
-  const pageSize = 6
+  const pageSize = 3
 
   const startRow = (currPage - 1) * pageSize
   const endRow = startRow + pageSize
@@ -27,9 +27,9 @@ const SearchResults = ({result}) => {
     }
 
   return (
-    <div id="productTable" className="results" style={{backgroundColor: 'lightsteelblue', padding: `1em`}}>
+    <div  style={{backgroundColor: 'lightsteelblue', padding: `1em`}}>
       <h3 style = {{backgroundColor:'rgb(182, 130, 93)', textAlign: 'center', color: 'white'}}>Results</h3>
-      <div id="iproducts" style={{color:'black'}}>
+      <div id="iproducts" style={{backgroundColor: `salmon`, padding: `1em`,color:'black'}}>
         {(theProducts.length) ? theProducts : `No matching products`}
       </div>
 

@@ -65,6 +65,11 @@ background-color: rgb(182, 130, 93);
 border:1px solid rgb(65, 65, 65);
 color: white;
 }
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 .filter-list{
     margin: .2em 0 0 0 ;
     display:flex;

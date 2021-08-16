@@ -20,22 +20,25 @@ const ProductRow = ({data}) => {
 
 return (
         <article className="product">
-            <Image src={iprodt_img} alt= {`${iprodt_name}`} className="img-product"/>
+            <Image src={iprodt_img} alt= {iprodt_name}className="img-product"/>
             
-            <div className="prod-details">
-              <h3 id="filtername"><a href={`${iprodt_link}`} >${iprodt_name}</a></h3>
-              <data value="39"><del>$${iprodt_price[0]}</del> <ins>${iprodt_price[1]}</ins></data>
-              <p>${iprodt_descrip}.</p>
+             <div className="prod-details">
+             <Link to={`/product/${id}`}>
+              <h3 id="filtername"><a href={`${iprodt_link}`} >{`${iprodt_name}`}</a></h3>
+              <data value={iprodt_price}><del>${iprodt_price[0]}</del> <ins>${iprodt_price[1]}</ins></data>
+              <p>{iprodt_descrip}.</p>
              <dl>
                <dt>Rating</dt>
-               <dd>${iprodt_ratings} <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_half</span></dd>
+               <dd>{iprodt_ratings}<span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_half</span></dd>
              </dl>
-              <a href="#"style="color: lightseagreen; text-decoration: underline;">see more</a>
+              <a href="#"style={{color: lightseagreen, textDecoration: underline}}>see more</a>
              <div className="product-cart">
              <input type="button" id="addtocart" value="addtocart"></input>
              <input type="button" id="fav" value="fav"></input>
              </div>
+             </Link>
              </div>
+            
         </article>
     )
 }
