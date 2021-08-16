@@ -89,12 +89,16 @@ const handleSortChange = ({target}) => {
 
 return (
  <Layout>
+   
+   
+     <h1 style={{paddingTop: '20px'}}>Filters</h1>
+   
    <form className="filters">
        <div className="filter-options" id="sort">
           <fieldset id="filter-price">
             <legend>Price:</legend>
-            <input type="range" name="price" id="filterPrice" value={minPrice} min="699.00" max="1319.00" step="1"  onChange={handlePriceChange}/>
-            <output htmlFor="filterPrice"> {minPrice.toFixed(1)}</output>
+            <input type="range" name="price"  id="filterPrice" value={minPrice} min="699.00" max="1319.00" step="1"  onChange={handlePriceChange}/>
+            <output htmlFor="filterPrice" style={{fontSize: '1.2em'}}> {minPrice.toFixed(1)}</output>
           </fieldset>
           <fieldset id="filter-color" onChange={onColorChange}>
             <legend>Colors</legend>

@@ -11,8 +11,8 @@ const Header = () => {
       </a>
       <h2>apple store</h2>
       <nav  className="navbar">
-      <label htmlFor="sort"style={{color:"black"}}>Search Product Name: </label>
-       <input type="search" placeholder="Search by product name" />
+      <label htmlFor="sort"style={{color:"black"}}>Search Product Name:</label>
+      <input type="search" placeholder="Search by product name"></input>
         <ul>
           <li><a href="#">Shop</a></li>
           <li><a href="#">About</a></li>
@@ -24,7 +24,7 @@ const Header = () => {
          <li><a href="#"><span className="material-icons" aria-label="Items in your cart">shopping_cart</span></a></li>
        </ul>
       </nav>
-
+     
        
 
     </header>
