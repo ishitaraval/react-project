@@ -91,7 +91,7 @@ return (
  <Layout>
    
    
-     <h1 style={{paddingTop: '20px'}}>Filters</h1>
+   <h2 style={{paddingTop: '140px'}}>Filters</h2>
    
    <form className="filters">
        <div className="filter-options" id="sort">
@@ -185,7 +185,7 @@ return (
             <option value="0">price, lowest to highest</option>
             <option value="1">price, highest to lowest</option>
           </select>
-        
+       
         
     </form>
     
