@@ -89,11 +89,8 @@ const handleSortChange = ({target}) => {
 
 return (
  <Layout>
-    <h3>Filters</h3>
-    <form class="filters">
-       <div class="filter-options" id="sort">
-        <form action="" class="form-cont"></form>
-         <div className="filter-options">
+   <form className="filters">
+       <div className="filter-options" id="sort">
           <fieldset id="filter-price">
             <legend>Price:</legend>
             <input type="range" name="price" id="filterPrice" value={minPrice} min="699.00" max="1319.00" step="1"  onChange={handlePriceChange}/>
@@ -174,13 +171,14 @@ return (
             </ul>
           </fieldset>
         </div>
-        <select name="sort" id="sortBy" class="sort-list">
-            <option value="0" selected>price, lowest to highest</option>
+        
+          <label htmlFor="sort"style={{color:"black"}}>Sort by: </label>
+         <select name="sort" id="sortBy" className="sort-list" defaultValue="0">
+            <option value="0">price, lowest to highest</option>
             <option value="1">price, highest to lowest</option>
           </select>
-    
-        <button type="submit">Apply Filters</button>
-      </div>    
+        
+        
     </form>
     
     <SearchResults result={searchResult}/>

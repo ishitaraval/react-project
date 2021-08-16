@@ -68,12 +68,12 @@ color: white;
 .filter-list{
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-evenly;
 }
 .filter-list label{
     color:white;
-    font-weight: normal;
-    font-size:14px;
+    font-weight:300;
+    font-size:20px;
 }
 .sort-list{
     margin-top:20px;

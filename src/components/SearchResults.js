@@ -28,13 +28,13 @@ const SearchResults = ({result}) => {
 
   return (
     <div id="productTable" className="results" style={{backgroundColor: 'lightsteelblue', padding: `1em`}}>
-      
-      <div id="iproducts">
+      <h3 style = {{backgroundColor:'rgb(182, 130, 93)', textAlign: 'center'}}>Results</h3>
+      <div id="iproducts" style={{color:'black'}}>
         {(theProducts.length) ? theProducts : `No matching products`}
       </div>
 
       
-      <p id="numProducts" style={{backgroundColor: `lightgreen`}}>
+      <p id="numProducts" style={{backgroundColor: `lightgreen` , color:'black'}}>
        <button onClick={()=> updatePage(currPage-1)} disabled={(currPage === 1 )?`disabled`:``}>
          <span className="material-icons">navigate_before</span>
        </button>

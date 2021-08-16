@@ -10,8 +10,9 @@ const Header = () => {
        <img src= {logo} className="logo"/>
       </a>
       <h2>apple store</h2>
-      <nav aria-label="Primary" className="navbar">
-       <input type="search" placeholder="Search" />
+      <nav  className="navbar">
+      <label htmlFor="sort"style={{color:"black"}}>Search Product Name: </label>
+       <input type="search" placeholder="Search by product name" />
         <ul>
           <li><a href="#">Shop</a></li>
           <li><a href="#">About</a></li>
