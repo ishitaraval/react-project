@@ -95,7 +95,7 @@ return (
         <form action="" class="form-cont"></form>
          <div className="filter-options">
           <fieldset id="filter-price">
-            <p>Price:</p>
+            <legend>Price:</legend>
             <input type="range" name="price" id="filterPrice" value={minPrice} min="699.00" max="1319.00" step="1"  onChange={handlePriceChange}/>
             <output htmlFor="filterPrice"> {minPrice.toFixed(1)}</output>
           </fieldset>
@@ -174,13 +174,12 @@ return (
             </ul>
           </fieldset>
         </div>
-        <fieldset>
-          <label htmlFor="sort">Sort by: </label>
-          <select name="sort" id="sortBy" className="sort-list" defaultValue="0"  onChange={handleSortChange}>
-            <option value="0" style={{color:'black'}}>price, lowest to highest</option>
-            <option value="1" style={{color:'black'}}>price, highest to lowest</option>
+        <select name="sort" id="sortBy" class="sort-list">
+            <option value="0" selected>price, lowest to highest</option>
+            <option value="1">price, highest to lowest</option>
           </select>
-        </fieldset>
+    
+        <button type="submit">Apply Filters</button>
       </div>    
     </form>
     

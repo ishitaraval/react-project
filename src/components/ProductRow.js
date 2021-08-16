@@ -18,8 +18,7 @@ const ProductRow = ({data}) => {
         }
     }
 
-    const the_store = iprodt_storage.map((store) => <li><label><input type="radio" name="storage" value="s" key={id}/>{store}gb</label></li>)
-    const the_color = iprodt_colors.map((col) => <li><label><input type="radio" name="colour" value="c"/>{col}</label></li>)
+
 
 
 
