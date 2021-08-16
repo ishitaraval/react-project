@@ -27,7 +27,7 @@ const SearchResults = ({result}) => {
     }
 
   return (
-    <div  style={{backgroundColor: 'black', padding: `1em`}}>
+    <div  style={{backgroundColor: 'black', padding: `1em`, maxWidth: 'inherit'}}>
       <h3 style = {{backgroundColor:'rgb(182, 130, 93)', textAlign: 'center', color: 'white'}}>Results</h3>
       <div id="iproducts" style={{backgroundColor: `salmon`, padding: `1em`,color:'black'}}>
         {(theProducts.length) ? theProducts : `No matching products`}

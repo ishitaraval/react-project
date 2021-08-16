@@ -1,9 +1,9 @@
 #root, html{
-    margin: 0;
+    margin: .2em 0 .2em 0;
 }
 
 .topheader{
-    max-width:100%;
+    max-width:inherit;
     margin:auto;
     background-color: black;
     height:100px;
@@ -61,24 +61,52 @@ legend{
 }
 fieldset{
 border-radius:5px;
-background-color: rgb(182, 130, 93);
+margin: .5em;
+background-color: black;
 border:1px solid rgb(65, 65, 65);
 color: white;
+
 }
-.filter-list{
+.filter-list, .filter-list fieldset> ul {
     margin: .2em 0 0 0 ;
     display:flex;
+    gap: 0em;
     flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:space-evenly;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    
     
 }
-.filter-list label{
-    margin: .2em 0 0 0 ;
+.filter-list{
+    margin: 0 4.3em 0 4.3em ;
     color:white;
     font-weight:200;
     font-size:1.2em;
+    
    
+} 
+label{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0em;
+    justify-content: left;
+    color:white;
+   
+}
+.product-prop,.product-prop fieldset> ul {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    gap: 0.2em;
+    font-size: 1.2em;
+    justify-content: center;
+}
+
+.product-prop{
+    display: flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    margin-bottom: 1em;
 }
 .sort-list{
     margin-top:20px;
@@ -131,9 +159,9 @@ input[type=button]{
 }
 
 .footer{
-    max-width:100%;
-    margin-top:20px;
-    background-color: rgb(243, 243, 243);
+    max-width:inherit;
+    margin-top:50px;
+    background-color: black;
     height:100px;
 }
 .legal{

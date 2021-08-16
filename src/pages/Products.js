@@ -95,11 +95,13 @@ return (
    
    <form className="filters">
        <div className="filter-options" id="sort">
+       <form className="product-prop">
           <fieldset id="filter-price">
             <legend>Price:</legend>
             <input type="range" name="price"  id="filterPrice" value={minPrice} min="699.00" max="1319.00" step="1"  onChange={handlePriceChange}/>
             <output htmlFor="filterPrice" style={{fontSize: '1.2em'}}> {minPrice.toFixed(1)}</output>
           </fieldset>
+          
           <fieldset id="filter-color" onChange={onColorChange}>
             <legend>Colors:</legend>
             <ul className="filter-list">
@@ -145,6 +147,7 @@ return (
               </li>
             </ul>
           </fieldset>
+         
           <fieldset id="rating" onChange={onRatingChange}>
             <legend>Ratings:</legend>
            <ul className="filter-list" style={{color: 'lightgoldenrodyellow'}}>
@@ -174,6 +177,7 @@ return (
               </li>
             </ul>
           </fieldset>
+          </form>
         </div>
         
           <label htmlFor="sort"style={{color:"black"}}>Sort by: </label>
