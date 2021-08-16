@@ -17,13 +17,7 @@ const Header = () => {
       </button>
       <nav aria-label="Primary" className="navbar">
         <ul className="menu">
-          <li><a href="#">Shop</a>
-            <ul className="submenu">
-              <li><a href="#" style={{backgroundColor: 'black', color:'cornflowerblue'}}>iphone 12 promax</a></li>
-              <li><a href="#"  style={{backgroundColor: 'black', color:'cornflowerblue'}}>iphone 12 pro</a></li>
-              <li><a href="#" style={{backgroundColor:'black', color:'cornflowerblue'}}>iphone 12 mini</a></li>
-            </ul>
-          </li>
+          <li><a href="#">Shop</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
           <li><a href="#">FAQ</a></li>
@@ -38,12 +32,12 @@ const Header = () => {
         <button type="button"><span className="material-icons">search</span></button>
       </form>
 
-      <div className="your-products">
+
        <ul className="header-cart">
          <li><a href="#"><span className="material-icons" aria-label="Favourites">favorite_border</span></a></li>
          <li><a href="#"><span className="material-icons" aria-label="Items in your cart">shopping_cart</span></a></li>
        </ul>
-      </div>
+
     </header>
 
   )
