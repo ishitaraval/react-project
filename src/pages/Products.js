@@ -122,7 +122,7 @@ return (
           </fieldset>
           <fieldset id="filter-storage"  onChange={onStorageChange} >
             <legend>Storage:</legend>
-            <ol className="filter-list" >
+            <ul className="filter-list" >
               <li>
                 <input type="checkbox" name="filter-store" value="32" id="32"/> 
                 <label htmlFor="32">32 gb</label>
@@ -143,7 +143,7 @@ return (
                 <input type="checkbox" name="filter-store" value="512" id="512"/>
                 <label htmlFor="512">512 gb</label>
               </li>
-            </ol>
+            </ul>
           </fieldset>
           <fieldset id="rating" onChange={onRatingChange}>
             <legend>Ratings:</legend>
