@@ -26,37 +26,22 @@ const ProductRow = ({data}) => {
     
     return (
         <article className="product">
-            <Image src={iprodt_img} alt= {`${iprodt_name}`}/>
+            <Image src={iprodt_img} alt= {`${iprodt_name}`} className="img-product"/>
             
-            <div className="product-prop">
-               <h3 id="filtername"><a href={iprodt_link}>{iprodt_name}</a></h3>
-              <data value={iprodt_price[1]}><del>${iprodt_price[0]}</del> <ins>${iprodt_price[1]}</ins></data>
-              <p>"{iprodt_descrip}."</p>
-              <dl>
-                 <dt>Rating</dt>
-                     <dd>${the_r} <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_half</span></dd>
-              </dl>
-              <a href="#"style={{color: 'blue', textDecoration: 'underline'}}>see more</a>
-  
-             <form className="product-prop">
-                 <fieldset>
-                     <legend>Colours</legend>
-                     <ul className= "radio-btn" id = "filter-color">
-                          ${the_color}
-                     </ul>
-                 </fieldset>
-                 <fieldset>
-                     <legend>Storage</legend>
-                     <ol className= "radio-btn" id="filter-storage">
-                          ${the_store}
-                      </ol>
-                 </fieldset>
-             </form>
-              <div className="product-list-cart">
-                  <button type="button" id="addtocart" value="addtocart"><span className="material-icons">Add to Cart</span></button>
-                 <button type="button" id="fav" value="fav"><span className="material-icons">favorite</span></button>
-               </div>
-           </div>
+            <div className="prod-details">
+              <h3 id="filtername"><a href="${iproducts.iprodt_link}">${iproducts.iprodt_name}</a></h3>
+              <data value="39"><del>$${iproducts.iprodt_price.prev}</del> <ins>${iproducts.iprodt_price.sale}</ins></data>
+              <p>${iproducts.iprodt_descrip}.</p>
+             <dl>
+               <dt>Rating</dt>
+               <dd>${iproducts.iprodt_ratings} <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_half</span></dd>
+             </dl>
+              <a href="#"style="color: lightseagreen; text-decoration: underline;">see more</a>
+             <div className="product-cart">
+             <input type="button" id="addtocart" value="addtocart"></input>
+             <input type="button" id="fav" value="fav"></input>
+             </div>
+             </div>
         </article>
     )
 }

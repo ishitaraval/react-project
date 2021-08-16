@@ -240,14 +240,8 @@ const App = () => {
     ]
 
     return (
-       <Router>
-          <switch>
-              <Route exact path="/"><Products data = {productsAr} /></Route>
-              <Route path="/product/:slug"><Product /></Route>
-              <Route path="/404"><FourOhFour/></Route>
-              <Redirect to="/404" />
-          </switch>
-        </Router>
+       <Products data = {productsAr} />
+              
       )
 }
     
