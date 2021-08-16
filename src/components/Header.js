@@ -6,15 +6,16 @@ const Header = () => {
   return (
     
 
-    <header className="page-header">
+    <header className="topheader">
       <a href="index.html" className="logo">
        <img src= {logo}/>
       </a>
+      <h2>apple store</h2>
 
       <button type="button" className="nav-toggle">
         <span className="material-icons">menu</span>
       </button>
-      <nav aria-label="Primary" className="navigation">
+      <nav aria-label="Primary" className="navbar">
         <ul className="menu">
           <li><a href="#">Shop</a>
             <ul className="submenu">
