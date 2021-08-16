@@ -9,7 +9,7 @@ const Layout = ({children}) => {
       <Header />
       
     
-      <main className="products">
+      <main className="product">
         {children}
       </main>
 

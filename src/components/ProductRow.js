@@ -3,7 +3,7 @@ import Image from 'components/Image'
 
 
 const ProductRow = ({data}) => {
-  const { iprodt_img, iprodt_name, iprodt_link, iprodt_descrip, iprodt_price, iprodt_ratings,iprodt_colors,iprodt_storage} = data
+  const { iprodt_img, iprodt_name, iprodt_link, iprodt_descrip, iprodt_price, iprodt_ratings} = data
 
     const article_pro = document.createElement('article')
     article_pro.classList.add('product')
@@ -18,22 +18,17 @@ const ProductRow = ({data}) => {
         }
     }
 
-
-
-
-
-    
-    return (
+return (
         <article className="product">
             <Image src={iprodt_img} alt= {`${iprodt_name}`} className="img-product"/>
             
             <div className="prod-details">
-              <h3 id="filtername"><a href="${iproducts.iprodt_link}">${iproducts.iprodt_name}</a></h3>
-              <data value="39"><del>$${iproducts.iprodt_price.prev}</del> <ins>${iproducts.iprodt_price.sale}</ins></data>
-              <p>${iproducts.iprodt_descrip}.</p>
+              <h3 id="filtername"><a href={`${iprodt_link}`} >${iprodt_name}</a></h3>
+              <data value="39"><del>$${iprodt_price[0]}</del> <ins>${iprodt_price[1]}</ins></data>
+              <p>${iprodt_descrip}.</p>
              <dl>
                <dt>Rating</dt>
-               <dd>${iproducts.iprodt_ratings} <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_half</span></dd>
+               <dd>${iprodt_ratings} <span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_half</span></dd>
              </dl>
               <a href="#"style="color: lightseagreen; text-decoration: underline;">see more</a>
              <div className="product-cart">
