@@ -9,6 +9,7 @@ const App = () => {
 
     const productsAr =[
         {
+           iprodt_id: 101,
            iprodt_img: `iphone-x.jpg`,
            iprodt_name: `iPhone-x`,
            iprodt_link: `product .html`,
@@ -20,6 +21,7 @@ const App = () => {
            
         },
         {
+            iprodt_id: 102,
             iprodt_img: `iphone-xr.jpg`,
             iprodt_name: `iPhone-xr`,
             iprodt_link: `product .html`,
@@ -30,6 +32,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 103,
             iprodt_img: `iphone-xs.jpg`,
             iprodt_name: `iPhone-xs`,
             iprodt_link: `product .html`,
@@ -41,6 +44,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 104,
             iprodt_img: `iphone-11.jpg`,
             iprodt_name: `iPhone-11`,
             iprodt_link: `product .html`,
@@ -52,6 +56,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 105,
             iprodt_img: `iphone-11pro.jpg`,
             iprodt_name: `iPhone-11pro`,
             iprodt_link: `product .html`,
@@ -63,6 +68,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 106,
             iprodt_img: `iphone-12mini.jpg`,
             iprodt_name: `iPhone 12 mini`,
             iprodt_link: `product .html`,
@@ -73,6 +79,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 107,
             iprodt_img: `iPhone-12Pro.jpg`,
             iprodt_name: `iPhone 12pro`,
             iprodt_link: `product .html`,
@@ -84,6 +91,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 108,
             iprodt_img: `iPhone-12-pro-max.jpg`,
             iprodt_name: `iPhone 12pro max`,
             iprodt_link: `product .html`,
@@ -94,7 +102,8 @@ const App = () => {
             iprodt_storage: [`64`,`128`,`256`,`512`]
             
          },
-         {
+         { 
+            iprodt_id: 109,
             iprodt_img: `iphone-SE-2.jpg`,
             iprodt_name: `iPhone SE-2`,
             iprodt_link: `product .html`,
@@ -106,6 +115,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 110,
             iprodt_img: `iphone-SE-3.jpg`,
             iprodt_name: `iPhone SE-3`,
             iprodt_link: `product .html`,
@@ -117,6 +127,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 111,
             iprodt_img: `iphone-9.jpg`,
             iprodt_name: `iPhone 9`,
             iprodt_link: `product .html`,
@@ -128,6 +139,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 112,
             iprodt_img: `iphone-8.jpg`,
             iprodt_name: `iPhone 8`,
             iprodt_link: `product .html`,
@@ -139,6 +151,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 113,
             iprodt_img: `iphone-8-plus.jpg`,
             iprodt_name: `iPhone 8-plus`,
             iprodt_link: `product .html`,
@@ -150,6 +163,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 114,
             iprodt_img: `iphone-7.jpg`,
             iprodt_name: `iPhone 7`,
             iprodt_link: `product .html`,
@@ -161,6 +175,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 115,
             iprodt_img: `iphone-7-plus.jpg`,
             iprodt_name: `iPhone 7-plus`,
             iprodt_link: `product .html`,
@@ -172,6 +187,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 116,
             iprodt_img: `iphone-6.jpg`,
             iprodt_name: `iPhone 6`,
             iprodt_link: `product .html`,
@@ -183,6 +199,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 117,
             iprodt_img: `iphone-6s.jpg`,
             iprodt_name: `iPhone 6s`,
             iprodt_link: `product .html`,
@@ -194,6 +211,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 118,
             iprodt_img: `iphone-5.jpg`,
             iprodt_name: `iPhone 5`,
             iprodt_link: `product .html`,
@@ -205,6 +223,7 @@ const App = () => {
             
          },
          {
+            iprodt_id: 119,
             iprodt_img: `iphone-5s.jpg`,
             iprodt_name: `iPhone 5s`,
             iprodt_link: `product .html`,
@@ -216,21 +235,11 @@ const App = () => {
             
          },
          {
+            iprodt_id: 120,
             iprodt_img: `iphone-5c.jpg`,
             iprodt_name: `iPhone 5c`,
             iprodt_link: `product .html`,
             iprodt_descrip: `iphone-5C , 64gb to 512gb storages available, add to your cart now.`,
-            iprodt_price:[1550.00,1305.00], 
-            iprodt_ratings: 4.4,
-            iprodt_colors: [`Gold`,`Midnightgreen`,`Spacegray`,`Silver`],
-            iprodt_storage: [`64`,`128`,`256`,`512`]
-            
-         },
-         {
-            iprodt_img: `iphone-4`,
-            iprodt_name: `iPhone 4`,
-            iprodt_link: `product .html`,
-            iprodt_descrip: `iphone-4 , 64gb to 512gb storages available, add to your cart now.`,
             iprodt_price:[1550.00,1305.00], 
             iprodt_ratings: 4.4,
             iprodt_colors: [`Gold`,`Midnightgreen`,`Spacegray`,`Silver`],
