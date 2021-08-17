@@ -126,11 +126,26 @@ button[type=submit]{
     border:none;
     color:white;
 }
+/* .add-cart{
+    position: absolute;
+    width: 100%;
+    background-color:lightgoldenrodyellow;
+    transition: all 0.3 ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+}
+.img-product:hover .add-cart{
+    bottom:50px;
+    opacity:1;
+    padding: 10px;
+    text-decoration: none;
+} */
 .product{
     margin-top:20px;
 }
 .img-product{
-  width:400px;
+  max-width:200px;
   margin-left:3em;
 }
 .addtocart{

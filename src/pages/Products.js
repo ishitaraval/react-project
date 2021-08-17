@@ -89,12 +89,10 @@ const handleSortChange = ({target}) => {
 
 return (
  <Layout>
+    <h2 style={{paddingTop: '140px'}}>Filters</h2>
    
-   
-   <h2 style={{paddingTop: '140px'}}>Filters</h2>
-   
-   <form className="filters">
-       <div className="filter-options" id="sort">
+    <form className="filters">
+      <div className="filter-options" id="sort">
        <form className="product-prop">
           <fieldset id="filter-price">
             <legend>Price:</legend>
@@ -177,16 +175,15 @@ return (
               </li>
             </ul>
           </fieldset>
-          </form>
-        </div>
+        </form>
+      </div>
         
-          <label htmlFor="sort"style={{color:"black"}}>Sort by: </label>
-         <select name="sort" id="sortBy" className="sort-list" defaultValue="0">
-            <option value="0">price, lowest to highest</option>
-            <option value="1">price, highest to lowest</option>
-          </select>
+      <label htmlFor="sort"style={{color:"black"}}>Sort by: </label>
+        <select name="sort" id="sortBy" className="sort-list" defaultValue="0" onChange={handleSortChange}>
+         <option value="0">price, lowest to highest</option>
+         <option value="1">price, highest to lowest</option>
+       </select>
        
-        
     </form>
     
     <SearchResults result={searchResult}/>
