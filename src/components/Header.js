@@ -19,7 +19,7 @@ const Header = () => {
           <li><a href="#" style = {{color: 'black'}}>Shop</a></li>
           <li><a href="#" style = {{color: 'black'}}>About</a></li>
           <li><a href="#" style = {{color: 'black'}}>Contact</a></li>
-          <li><a href="#" style = {{color: 'black'}}>FAQ</a></li>
+          <li><a href="#" style = {{color: 'black'}}> FAQ</a></li>
         </ul>
         <ul className="header-cart">
          <li><a href="#" style = {{color: 'black'}}><span className="material-icons" aria-label="Favourites">favorite_border</span></a></li>

@@ -9,7 +9,7 @@ import 'antd/dist/antd.css'
 const SearchResults = ({result}) => {
 
   const [currPage, setCurrPage] = useState(1)
-  const pageSize = 3
+  const pageSize = 10
 
   const startRow = (currPage - 1) * pageSize
   const endRow = startRow + pageSize

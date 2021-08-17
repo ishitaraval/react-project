@@ -5,23 +5,26 @@ import SearchResults from 'components/SearchResults'
 const Products = ({data}) => {
   const [searchState, setSearchState] = useState({
     minPrice: 0.0,
-    colors: [],
-    storage: [],
+    query:``,
+    color: [],
+    storages: [],
     rating: 0,
     sort: (a, b) => a.price[1] - b.price[1]
   })
 
   // For convenience, destructure all of the values into local variables
-  const {minPrice,colors, storage, rating, sort} = searchState
+  const {minPrice,query,color, storages, rating, sort} = searchState
 
   // ****** FILTER ******
   // Filter the results into a new array that's the same size or smaller
-  const searchResult = data.filter(({price}) => price >= minPrice)
-.filter(({ratingsSelected}) => rating == ratingsSelected || rating === 0 ) 
- .filter(({colorsSelected}) => colors.length === 0 || 
-                      colorsSelected.filter((col) => colors.includes(col)).length > 0)
-.filter(({storageSelected}) => storage.length === 0 || 
-                     storageSelected.filter((store) => storage.includes(store)).length > 0) 
+  const searchResult = data
+.filter(({price}) => price >= minPrice)
+.filter(({ratings}) => rating == ratings || rating === 0 ) 
+.filter(({name}) => name.first.toUpperCase().includes(query.toUpperCase()))
+ .filter(({colors}) => color.length === 0 || 
+                      colors.filter((col) => color.includes(col)).length > 0)
+.filter(({storage}) => storages.length === 0 || 
+                     storage.filter((store) => storages.includes(store)).length > 0) 
 .sort(sort)  
 
 const handlePriceChange = (event) => {
@@ -31,6 +34,14 @@ const handlePriceChange = (event) => {
   })
 }
 
+const handleQueryChange = (event) => {
+  //setQuery(event.target.value)
+
+  setSearchState({
+    ...searchState,
+    query: event.target.value
+  })
+}
 
 
                                   
@@ -68,7 +79,7 @@ const onStorageChange = ({target}) => {
 const onRatingChange = (event) => {
   setSearchState({
     ...searchState,
-    rating: event.target.value
+    ratings: event.target.value
   })
 }
 
@@ -86,7 +97,7 @@ const handleSortChange = ({target}) => {
     sort: sorting
   })
 }
-
+console.log(searchState)
 return (
  <Layout>
     <h2 style={{paddingTop: '140px'}}>Filters</h2>
