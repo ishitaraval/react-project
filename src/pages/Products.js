@@ -6,25 +6,25 @@ const Products = ({data}) => {
   const [searchState, setSearchState] = useState({
     minPrice: 0.0,
     query:``,
-    color: [],
-    storages: [],
-    rating: 0,
+   cols: [],
+    stores: [],
+    phonerating: 0,
     sort: (a, b) => a.price[1] - b.price[1]
   })
 
   // For convenience, destructure all of the values into local variables
-  const {minPrice,query,color, storages, rating, sort} = searchState
+  const {minPrice,query,cols, stores, phonerating, sort} = searchState
 
   // ****** FILTER ******
   // Filter the results into a new array that's the same size or smaller
   const searchResult = data
 .filter(({price}) => price >= minPrice)
-.filter(({ratings}) => rating == ratings || rating === 0 ) 
+.filter(({ratings}) => phonerating == ratings || rating === 0 ) 
 .filter(({name}) => name.first.toUpperCase().includes(query.toUpperCase()))
- .filter(({colors}) => color.length === 0 || 
-                      colors.filter((col) => color.includes(col)).length > 0)
-.filter(({storage}) => storages.length === 0 || 
-                     storage.filter((store) => storages.includes(store)).length > 0) 
+ .filter(({colors}) => cols.length === 0 || 
+                      colors.filter((col) => cols.includes(col)).length > 0)
+.filter(({storage}) => stores.length === 0 || 
+                     storage.filter((store) => stores.includes(store)).length > 0) 
 .sort(sort)  
 
 const handlePriceChange = (event) => {
@@ -45,32 +45,33 @@ const handleQueryChange = (event) => {
 
 
                                   
-const onColorChange = ({target}) => {
+const handleColorChange = ({target}) => {
   if (target.checked) {
     setSearchState({
       ...searchState,
-      colors: [...searchState.colors, target.value]
+      cols: [...searchState.cols, target.value]
     })
+    console.log(cols)
   } else {
     setSearchState({
       ...searchState,
-      colors: searchState.colors.filter((color) => color !== target.value)
+      cols: searchState.cols.filter((col) => col !== target.value)
     })
   }
 }  
 
-const onStorageChange = ({target}) => {
+const handleStorageChange = ({target}) => {
     
   if (target.checked) {
     setSearchState({
       ...searchState,
-      storage: [...searchState.storage, target.value]
+      stores: [...searchState.stores, target.value]
     })
-    console.log(storage)
+    console.log(stores)
   } else {
     setSearchState({
       ...searchState,
-      storage: searchState.storage.filter((store) => store !== target.value)
+      stores: searchState.stores.filter((store) => store !== target.value)
     })
   }
 }  
@@ -79,7 +80,7 @@ const onStorageChange = ({target}) => {
 const onRatingChange = (event) => {
   setSearchState({
     ...searchState,
-    ratings: event.target.value
+    phonerating: event.target.value
   })
 }
 
@@ -103,37 +104,37 @@ return (
     <h2 style={{paddingTop: '140px'}}>Filters</h2>
    
     <form className="filters">
-      <div className="filter-options" id="sort">
+      <div>
        <form className="product-prop">
-          <fieldset id="filter-price">
+          <fieldset>
             <legend>Price:</legend>
             <input type="range" name="price"  id="filterPrice" value={minPrice} min="699.00" max="1319.00" step="1"  onChange={handlePriceChange}/>
             <output htmlFor="filterPrice" style={{fontSize: '1.2em'}}> {minPrice.toFixed(1)}</output>
           </fieldset>
           
-          <fieldset id="filter-color" onChange={onColorChange}>
+          <fieldset id="filterColor" onChange={handleColorChange}>
             <legend>Colors:</legend>
             <ul className="filter-list">
-              <li><input type="checkbox" className="check"  name="filter-col" value="black" id="blackcol"/> 
+              <li><input type="checkbox"name="filter-col" value="black" id="blackcol"/> 
                 <label htmlFor="blackcol">Black</label>
               </li>
-              <li><input type="checkbox" className="check"  name="filter-col" value="white" id="whitecol"/> 
+              <li><input type="checkbox"  name="filter-col" value="white" id="whitecol"/> 
                 <label htmlFor="whitecol">White</label>
               </li>
-              <li><input type="checkbox" className="check"  name="filter-col" value="midnightgreen" id="midnightgreencol"/>
+              <li><input type="checkbox"  name="filter-col" value="midnightgreen" id="midnightgreencol"/>
                 <label htmlFor="midnightgreencol">Midnight green</label>
               </li>
-              <li><input type="checkbox" className="check"  name="filter-col" value="pacificblue" id="pacificbluecol"/> 
+              <li><input type="checkbox"   name="filter-col" value="pacificblue" id="pacificbluecol"/> 
                 <label htmlFor="pacificbluecol">Pacific blue</label>
               </li>
-              <li><input type="checkbox" className="check"  name="filter-col" value="rosegold" id="rosegoldcol"/> 
+              <li><input type="checkbox"  name="filter-col" value="rosegold" id="rosegoldcol"/> 
                 <label htmlFor="rosegoldcol">Rose Gold</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset id="filter-storage"  onChange={onStorageChange} >
+          <fieldset id="filterStorage"  onChange={handleStorageChange} >
             <legend>Storage:</legend>
-            <ul className="filter-list" >
+            <ul className="filter-list">
               <li>
                 <input type="checkbox" name="filter-store" value="32" id="32"/> 
                 <label htmlFor="32">32 gb</label>

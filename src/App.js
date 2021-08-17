@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import 'material-design-icons/iconfont/material-icons.css'
+const {useState, useContext, createContext} = React
 import Products from 'pages/Products'
 import FourOhFour from 'pages/FourOhFour'
 
@@ -248,10 +249,26 @@ const App = () => {
          }
     ]
 
+     // FILE: App.js
+
     return (
-       <Products data = {productsAr} />
-              
+      //  <Products data = {productsAr} />
+       <Router>
+       
+         <Switch>
+           <Route exact path="/"> <Products data = {productsAr} /></Route>
+           
+           
+           <Route path="*"><FourOhFour /></Route>
+           {/* <Route path="/404"><FourOhFour /></Route>
+           <Redirect to="/404" /> */}
+         </Switch>
+       </Router>
       )
 }
     
     export default App
+
+   
+	
+	
