@@ -8,7 +8,7 @@ const Products = ({data}) => {
     query:``,
    cols: [],
     stores: [],
-    phonerating: 0,
+    phonerating: 0.0,
     sort: (a, b) => a.price[1] - b.price[1]
   })
 
@@ -18,9 +18,9 @@ const Products = ({data}) => {
   // ****** FILTER ******
   // Filter the results into a new array that's the same size or smaller
   const searchResult = data
-.filter(({price}) => price >= minPrice)
-.filter(({ratings}) => phonerating == ratings || rating === 0 ) 
-.filter(({name}) => name.first.toUpperCase().includes(query.toUpperCase()))
+.filter(({price}) => price[1] >= minPrice)
+.filter(({ratings}) => ratings >= phonerating || ratings === 0 ) 
+.filter(({name}) => name.toUpperCase().includes(query.toUpperCase()))
  .filter(({colors}) => cols.length === 0 || 
                       colors.filter((col) => cols.includes(col)).length > 0)
 .filter(({storage}) => stores.length === 0 || 
@@ -103,7 +103,7 @@ return (
  <Layout>
     <h2 style={{paddingTop: '140px'}}>Filters</h2>
    
-    <form className="filters">
+    <div className="filters">
       <div>
        <form className="product-prop">
           <fieldset>
@@ -196,7 +196,7 @@ return (
          <option value="1">price, highest to lowest</option>
        </select>
        
-    </form>
+    </div>
     
     <SearchResults result={searchResult}/>
  </Layout>

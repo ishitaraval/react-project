@@ -8,7 +8,7 @@ const Footer = () => {
         <li><a href="#">Terms of Use</a></li>
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Accessibility</a></li>
-      </ul>
+    </ul>
   </footer>
   )
 }

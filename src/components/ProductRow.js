@@ -20,7 +20,7 @@ const ProductRow = ({data}) => {
     }
 
 return (
-         <article className="iproduct">
+         <article className="iproducts">
             <Image src={photo} alt= {name} className="img-product"/>
             
              <div className="prod-details">
@@ -29,9 +29,9 @@ return (
                <p>{descrip}.</p>
                <dl>
                  <dt>Rating</dt>
-                   <dd>{the_r}<span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star</span><span className="material-icons">star_half</span></dd>
+                   <dd>{the_r}</dd>
                </dl>
-               <a href="#"style={{color: lightseagreen, textDecoration: underline}}>see more</a>
+               <a href="#"style={{color: `lightseagreen`, textDecoration: `underline`}}>see more</a>
                <div className="product-cart">
                  <input type="button" id="addtocart" value="addtocart" className="add-cart"></input>
                  <input type="button" id="fav" value="fav"></input>
