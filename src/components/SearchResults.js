@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import ProductRow from './ProductRow'
+import ProductRow from 'components/ProductRow'
 import { Pagination } from 'antd'
 import 'antd/dist/antd.css'
 
@@ -9,7 +9,7 @@ import 'antd/dist/antd.css'
 const SearchResults = ({result}) => {
 
   const [currPage, setCurrPage] = useState(1)
-  const pageSize = 10
+  const pageSize = 3
 
   const startRow = (currPage - 1) * pageSize
   const endRow = startRow + pageSize

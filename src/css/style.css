@@ -190,9 +190,44 @@ input[type=button]{
     color:rgb(182, 130, 93);
     font-weight: normal;
 }
-
-
-
+.iproducts {
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-gap: 1em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+  }
+  .iproducts data {
+    text-align: right;
+  }
+  .photo {
+    width: 2em;
+    height: 2em;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+  }
+  .iproduct {
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-gap: 1em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+  }
+  .iproduct data {
+    text-align: right;
+  }
+  .container {
+    padding: 0 1em;
+    width: 100%;
+    max-width: 60em;
+    margin: 0 auto;
+  }
+  .toplevel-main {
+    flex-grow: 1;
+  }
 
 @media only screen and (min-width: 600px){
 

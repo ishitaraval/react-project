@@ -20,7 +20,7 @@ const ProductRow = ({data}) => {
     }
 
 return (
-         <article className="product">
+         <article className="iproduct">
             <Image src={photo} alt= {name} className="img-product"/>
             
              <div className="prod-details">
