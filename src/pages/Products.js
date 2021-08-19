@@ -8,7 +8,7 @@ const Products = ({data}) => {
     query:``,
    cols: [],
     stores: [],
-    phonerating: 0.0,
+    phonerating: `0`,
     sort: (a, b) => a.price[1] - b.price[1]
   })
 

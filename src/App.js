@@ -42,7 +42,7 @@ const App = () => {
    //         link: `product .html`,
    //         descrip: `iphone-X , 64gb to 512gb storages available, add to your cart now`,
    //         price: [1500.00,1319.00],
-   //         ratings: 4.4,
+   //         ratings: 4,
    //         colors: [`white`,`black`,`rose gold`],
    //         storage: [`64`,`128`,`256`,`512`]
            
@@ -63,7 +63,7 @@ const App = () => {
    //          photo: `iphone-xs.jpg`,
    //          name: `iPhone-xs`,
    //          link: `product .html`,
-   //          descrip: `iphone-XR , 64gb to 512gb storages available, add to your cart now`,
+   //          descrip: `iphone-Xs , 64gb to 512gb storages available, add to your cart now`,
    //          price:[1000.00,899.00], 
    //          ratings: 4.4,
    //          colors: [`white`,`black`,`rose gold`],
