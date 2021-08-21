@@ -146,11 +146,13 @@ button[type=submit]{
 }
 .img-product{
   max-width:200px;
+  height: auto;
   margin-left:3em;
 }
 .addtocart{
     border:none;
 }
+
 
 input[type=button]{
     margin-top:10px;

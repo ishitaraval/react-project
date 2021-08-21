@@ -1,14 +1,22 @@
-const {useState, useContext, createContext} = React
-const {BrowserRouter, Switch, Route, Redirect, Link} = ReactRouterDOM
-const Item = ({data: {id, name, cost}}) => {
-	console.log(`Item()`)
+import React, {useContext} from 'react'
+import {CartContext, useMoney} from 'context/cart'
+
+
+const Item = ({data}) => {
+	// console.log("data:",data);
 	
-	const {data, updater} = useContext(CartContext)
+	const {id, photo, name, link, descrip, price, ratings} = data
+	console.log("data:",data);
+	console.log(descrip);
+	const {data1, updater} = useContext(CartContext)
+	console.log("data:1",data1);
 	
 	return (
-		<li><b>{name}</b> {useMoney(cost)}{` `}
-			<button onClick={() => updater(id)}>Add to Cart</button>
+		<>
+		<li><b>{name}</b> 
+		<button	type="button" id="addtocart" onClick={() => updater(id, name)} value="addtocart" className="add-cart"></button>
 		</li>
+		</>
 	)
 }
 export default Item

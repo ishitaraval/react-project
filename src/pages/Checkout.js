@@ -1,5 +1,9 @@
-const {useState, useContext, createContext} = React
-const {BrowserRouter, Switch, Route, Redirect, Link} = ReactRouterDOM
+import React, {useContext} from 'react'
+import Layout from 'components/Layout'
+import {CartContext, useMoney} from 'contexts/cart'
+import ProductsContext from 'contexts/products'
+import Image from 'components/Image'
+// const {BrowserRouter, Switch, Route, Redirect, Link} = ReactRouterDOM
 
 // FILE: pages/Checkout.js
 const Checkout = () => {
@@ -15,9 +19,9 @@ const Checkout = () => {
 				{ 
 					(cart.length)
 						? (cart.map(item => {
-								let {name, cost} = products.find(prod => prod.id === item.id)
-								subtotal += cost * item.count
-								return <li key={item.id}><b>{name}</b> ({item.count} x {useMoney(cost)}) <b>{useMoney(cost * item.count)}</b></li> }))
+								let {id,name, price} = products.find(prod => prod.id === item.id)
+								subtotal += price[1] * item.count
+								return <li key={item.id}><b>{name}</b> ({item.count} x {useMoney(price)}) <b>{useMoney(price * item.count)}</b></li> }))
 						: (<div>No items in your cart, try going to the <Link to="/">shop</Link></div> )
 				}
 			</ul>
