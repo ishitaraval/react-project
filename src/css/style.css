@@ -152,7 +152,11 @@ button[type=submit]{
 .addtocart{
     border:none;
 }
-
+.Image{
+    max-width:200px;
+  height: auto;
+  margin-left:3em;
+}
 
 input[type=button]{
     margin-top:10px;

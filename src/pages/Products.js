@@ -35,7 +35,7 @@ const handlePriceChange = (event) => {
 }
 
 const handleQueryChange = (event) => {
-  //setQuery(event.target.value)
+  // setQuery(event.target.value)
 
   setSearchState({
     ...searchState,
@@ -136,23 +136,23 @@ return (
             <legend>Storage:</legend>
             <ul className="filter-list">
               <li>
-                <input type="checkbox" name="filter-store" value="32" id="32"/> 
+                <input type="checkbox" name="filter-store" value="32gb" id="32"/> 
                 <label htmlFor="32">32 gb</label>
               </li>
               <li>
-                <input type="checkbox" name="filter-store" value="64" id="64"/> 
+                <input type="checkbox" name="filter-store" value="64gb" id="64"/> 
                 <label htmlFor="64">64 gb</label>
               </li>
               <li>
-                <input type="checkbox" name="filter-store" value="128" id="128"/> 
+                <input type="checkbox" name="filter-store" value="128gb" id="128"/> 
                 <label htmlFor="128">128 gb</label>
               </li>
               <li>
-                <input type="checkbox" name="filter-store" value="256" id="256"/> 
+                <input type="checkbox" name="filter-store" value="256gb" id="256"/> 
                 <label htmlFor="256">256 gb</label>
               </li>
               <li>
-                <input type="checkbox" name="filter-store" value="512" id="512"/>
+                <input type="checkbox" name="filter-store" value="512gb" id="512"/>
                 <label htmlFor="512">512 gb</label>
               </li>
             </ul>

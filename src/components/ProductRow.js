@@ -5,8 +5,8 @@ import Item from 'components/Item'
 
 
 const ProductRow = ({data}) => {
-  const {id, photo, name, link,colors, descrip, price, ratings} = data
-  
+  const {id, photo, name, link,colors,storage,descrip, price, ratings} = data
+    
     const article_pro = document.createElement('article')
     article_pro.classList.add("product")
     
@@ -20,7 +20,8 @@ const ProductRow = ({data}) => {
         }
     }
 
-    const the_c = colors.map((col) => <li><label>{col}</label></li>)
+    const the_color = colors.map((col) => <li><label>{col}</label></li>)
+    const the_store = storage.map((store) => <li><label>{store}</label></li>)
 
 return (
          <article className="iproducts">
@@ -30,12 +31,20 @@ return (
                <Link to={`/product/${id}`}><h3 id="filtername"><a href={link} >{name}</a></h3></Link>
                <data value={price}><del>${price[0]}</del> <ins>${price[1]}</ins></data>
                <p>{descrip}.</p>
-               <fieldset>
+               <form>
+                 <fieldset>
                     <legend>Colors:</legend>
                     <ul>
-                        {the_c}
+                        {the_color}
                     </ul>
-                    </fieldset>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Storages:</legend>
+                    <ul>
+                        {the_store}
+                    </ul>
+                  </fieldset>
+                </form>
                <dl>
                  <dt>Ratings(Above)</dt>
                    <dd>{the_r}</dd>
