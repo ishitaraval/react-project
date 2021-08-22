@@ -45,9 +45,9 @@ const SearchResults = ({result}) => {
           <span className="material-icons">navigate_next</span>
         </button>
       </p>
-      <p>
+      
       <Pagination current={currPage} total={result.length} defaultPageSize={pageSize} onChange={(page) => setCurrPage(page)} />
-      </p>
+      
         
     </div>
   )
