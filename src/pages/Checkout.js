@@ -25,13 +25,13 @@ const Checkout = ({data}) => {
 								subtotal += price[1] * item.count
 								return <Link to={`/single_products/${id}`}>
 								<Image src={photo} alt={name} ></Image> 
-								<h2 className="cartProduct" key={item.id}><b>{name}</b> ({item.count} x {useMoney(price[1])}) <b>= {useMoney(price[1] * item.count)}</b></h2>
+								<h2 style={{marginTop:'2em',fontSize:'1em'}}className="cartProduct" key={item.id}><b>{name}</b> ({item.count} x {useMoney(price[1])}) <b>= {useMoney(price[1] * item.count)}</b></h2>
 							</Link>}))
 						: (<div ><h3 style={{color:'red'}}>No items in your cart, try going to the SHOP</h3></div> )
 				}
 			</ul>
-			<footer style={{marginTop:'28em'}}>
-				{Boolean(cart.length) && <div><em>(this does not do anything)</em> <button className="addtocart">Check out {useMoney(subtotal)}</button></div>}
+			<footer style={{marginLeft:'2em'}}>
+				{Boolean(cart.length) && <div><button className="addtocart">Check out {useMoney(subtotal)}</button></div>}
 			</footer>
 		</Layout>
 	)
