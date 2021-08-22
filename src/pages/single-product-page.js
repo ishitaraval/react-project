@@ -13,8 +13,8 @@ const Single_product = ({data, page_tit}) => {
   console.log("DAta:",products)
   const {slug} = useParams()
   console.log("slug1:",slug);
-  const {id, photo, name, link,colors,storage,descrip, price, ratings} = products.find(product => product.id == slug)
-  const prd = products.find(product => product.id == slug)
+  const {id, photo, name,colors,storage, price, ratings} = products.find(product => product.id == slug)
+  const prod = products.find(product => product.id == slug)
   console.log("slug:",slug);
 
   let the_r = []
@@ -34,11 +34,7 @@ const Single_product = ({data, page_tit}) => {
           {/* MAIN PRODUCT SECTION  */}
         <article className="single-product">
           <section className="prod-images">
-            {/* <Image onClick={() => {setImage(photo[0])}} src={photo[0]} alt={name} className="thumb" />
-            <Image onClick={() => {setImage(photo[1])}} src={photo[1]} alt={name} className="thumb" />
-            <Image onClick={() => {setImage(photo[2])}} src={photo[2]} alt={name} className="thumb"/> */}
             <div className="prod-main-pic">
-              {/* <img src="img/5b.jpg" alt="Product Image" id="main_pic"/> */}
               <Image src={photo} alt={name} id="main_pic" />
             </div>
           </section>
@@ -56,9 +52,9 @@ const Single_product = ({data, page_tit}) => {
                  <div className="product-list-cart">
                    {/* <button type="button" id="addtocart" value="addtocart"><span className="material-icons">add_shopping_cart</span> Add to Cart</button> */
                    }
-                   <Item key={id} data={prd } />
+                   <Item key={id} data={prod } />
                    {/* <button type="button"><span className="material-icons">favorite</span></button> */}
-                    <Fav key={id} data={prd } />
+                    <Fav key={id} data={prod } />
                  </div>
                  <div className="EMI">
                    <h4><strong>EMI</strong> starts at $67.09. No cost EMI available</h4>
