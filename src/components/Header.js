@@ -1,5 +1,8 @@
 import React from 'react'
 import logo from 'img/logo.png'
+import {Link} from 'react-router-dom'
+import CartCount from 'components/CartCount'
+import FavCount from 'components/FavCount'
 
 
 const Header = () => {
@@ -22,10 +25,13 @@ const Header = () => {
           <li><a href="#" style = {{color: 'black'}}>Contact</a></li>
           <li><a href="#" style = {{color: 'black'}}> FAQ</a></li>
         </ul>
-        <ul className="header-cart">
-         <li><a href="#" style = {{color: 'black'}}><span className="material-icons" aria-label="Favourites">favorite_border</span></a></li>
-         <li><a href="#" style = {{color: 'black'}}><span className="material-icons" aria-label="Items in your cart">shopping_cart</span></a></li>
-       </ul>
+        <nav className="header-cart">
+        
+        <Link to="/fav"><FavCount /></Link>
+         {/* <li><a href="#" style = {{color: 'black'}}><span className="material-icons" aria-label="Favourites">favorite_border</span></a></li> */}
+         {/* <li><a href="#" style = {{color: 'black'}}><span className="material-icons" aria-label="Items in your cart">shopping_cart</span></a></li> */}
+         <Link to="/cart"><CartCount /></Link>
+       </nav>
       </nav>
      
        

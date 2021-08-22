@@ -2,20 +2,22 @@ import React, {useContext} from 'react'
 import {CartContext, useMoney} from 'context/cart'
 
 
+
 const Item = ({data}) => {
 	// console.log("data:",data);
 	
 	const {id, photo, name, link, descrip, price, ratings} = data
-	console.log("data:",data);
-	console.log(descrip);
+	console.log("product description: ",descrip);
+	console.log("product data: ",data);
+	console.log("price: ",price[1]);
 	const {data1, updater} = useContext(CartContext)
-	console.log("data:1",data1);
+	
 	
 	return (
 		<>
-		<li><b>{name}</b> 
-		<button	type="button" id="addtocart" onClick={() => updater(id, name)} value="addtocart" className="add-cart"></button>
-		</li>
+		
+		<button	 id="addtocart" onClick={() => updater(id)} type="button" className="addtocart"><span className="material-icons">add_shopping_cart</span>Add to cart</button>
+		
 		</>
 	)
 }

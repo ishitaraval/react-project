@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@firebase/firestore": "^2.3.10",
+    "@umijs/use-params": "^1.0.5",
     "antd": "^4.16.9",
     "firebase": "^8.9.1",
     "material-design-icons": "^3.0.1",

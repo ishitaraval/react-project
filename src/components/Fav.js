@@ -1,0 +1,21 @@
+import React, {useContext} from 'react'
+import {FavContext, userMon}  from 'context/fav'
+
+
+const Fav= ({data}) => {
+	console.log("Data for fav: ",data)
+    const {id, name,price} = data
+	const {data1, updater} = useContext(FavContext)
+
+	
+	return (
+		<>
+			<button onClick={() => updater(id, name)}
+             type="button" className="addtofav">
+             <span className="material-icons" aria-label="Favourites">favorite_border</span>
+			</button>
+		</>
+	)
+}
+
+export default Fav

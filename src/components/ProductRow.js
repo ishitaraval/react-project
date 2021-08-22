@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import Image from 'components/Image'
 import Item from 'components/Item'
+import Fav from 'components/Fav'
 
 
 const ProductRow = ({data}) => {
@@ -28,7 +29,7 @@ return (
             <Image src={photo} alt= {name} className="img-product"/>
             
              <div className="prod-details">
-               <Link to={`/product/${id}`}><h3 id="filtername"><a href={link} >{name}</a></h3></Link>
+               <Link to={`/single-product-page/${data.id}`}><h3 id="filtername"><a href={link} style={{color: `blueviolet`, textDecoration: `underline`}} >{name}</a></h3></Link>
                <data value={price}><del>${price[0]}</del> <ins>${price[1]}</ins></data>
                <p>{descrip}.</p>
                <form>
@@ -51,9 +52,10 @@ return (
                </dl>
                <a href="#"style={{color: `lightseagreen`, textDecoration: `underline`}}>see more</a>
                <div className="product-cart">
-                 <input type="button" id="addtocart"onClick={() => updater(id)} value="addtocart" className="add-cart"></input>
-                 {/* <Item key={id} data={data} /> */}
-                 <input type="button" id="fav" value="fav"></input>
+                 {/* <input type="button" id="addtocart"onClick={() => updater(id)} value="addtocart" className="add-cart"></input> */}
+                 <Item key={id} data={data} />
+                 {/* <input type="button" id="fav" value="fav"></input> */}
+                 <Fav key={id} data={data} />
                </div>
                </div>
            </article>
