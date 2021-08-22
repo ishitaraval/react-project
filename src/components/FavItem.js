@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import {FavContext, userMon}  from 'context/fav'
+import {FavContext}  from 'context/fav'
 
 
 const FavItem= ({data}) => {

@@ -20,6 +20,12 @@ const ProductRow = ({data}) => {
             the_r.push(<span className="material-icons">star_border</span>)
         }
     }
+    const colorChange = (event) => {
+      setSearchState({
+       ...searchState,
+       minPrice: Number(event.target.value),
+     })
+   }
 
     const the_color = colors.map((col) => <li><label>{col}</label></li>)
     const the_store = storage.map((store) => <li><label>{store}</label></li>)
@@ -29,7 +35,7 @@ return (
             <Image src={photo} alt= {name} className="img-product"/>
             
              <div className="prod-details">
-             <h3  style={{color:'blueviolet', textDecoration:'underline'}}><Link to={`/single-products/${data.id}`}>{name}</Link></h3>
+             <h3  style={{color:'blueviolet', textDecoration:'underline'}}><Link to={`/single_products/${data.id}`}>{name}</Link></h3>
                <data value={price}><del>${price[0]}</del> <ins>${price[1]}</ins></data>
                <p>{descrip}.</p>
                <form>
@@ -55,7 +61,7 @@ return (
                  {/* <input type="button" id="addtocart"onClick={() => updater(id)} value="addtocart" className="add-cart"></input> */}
                  <Item key={id} data={data} />
                  {/* <input type="button" id="fav" value="fav"></input> */}
-                 <FavItem key={id} data={data} />
+                 <FavItem key={id} data={data}/>
                </div>
                </div>
            </article>

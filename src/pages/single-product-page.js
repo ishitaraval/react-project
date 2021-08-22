@@ -4,19 +4,17 @@ import Layout from 'components/Layout'
 import Image from 'components/Image'
 import Item from 'components/Item'
 import FavItem from 'components/FavItem'
-import 'css/singleproductdetails.css'
+// import 'css/singleproductdetails.css'
 import {useParams} from 'react-router-dom'
 
 
-const Single_product = ({data, page_tit}) => {
+const Single_product = ({data}) => {
   const products = useContext(ProductsContext)
   console.log("DAta:",products)
   const {slug} = useParams()
-  console.log("slug1:",slug);
   const {id, photo, name,colors,storage, price, ratings} = products.find(product => product.id === slug)
   const prod = products.find(product => product.id === slug)
-  console.log("slug:",slug);
-
+  
   let the_r = []
   for (let x = 0; x < 5; x++) {
       if (ratings > x) {
@@ -30,7 +28,7 @@ const Single_product = ({data, page_tit}) => {
   const the_color = colors.map((col) => <li><label><input type="radio" name="color" value="c"/>{col}</label></li>)
 
   return (
-    <Layout page_title = {page_tit}>
+    <Layout>
           {/* MAIN PRODUCT SECTION  */}
         <article className="single-product">
           <section className="prod-images">

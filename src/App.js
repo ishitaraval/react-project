@@ -12,7 +12,7 @@ import Products from 'pages/Products'
 import FourOhFour from 'pages/FourOhFour'
 import 'css/reset.css';
 import 'css/index.css';
-import FavouritedItem from './pages/FavouritedItem'
+import FavouritedItem from 'pages/FavouritedItem'
 
 
 const App = () => {
