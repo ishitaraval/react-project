@@ -7,7 +7,7 @@ import Image from 'components/Image'
 import {Link} from 'react-router-dom'
 
 
-const FavoritedItem = ({data,page_tit}) => {
+const FavoritedItem = ({data}) => {
 	
 	const fav = useContext(FavContext).data
 	const products = useContext(ProductsContext)
@@ -15,26 +15,29 @@ const FavoritedItem = ({data,page_tit}) => {
 
 
 	return (
-		<Layout page_title = {page_tit}>
+		<Layout>
+			<h2 style={{marginTop:'5em'}}>Favourite</h2>
 				<ul>
 					{ 
 						(fav.length)
 							? (fav.map(item => {
 
-								let {id,  name, price} = products.find(prod => prod.id === item.id)
+								let {id, photo, name, price} = products.find(prod => prod.id === item.id)
 								subtotal += price[1] * item.count
-								return <Link to={`/single_product/${id}`}>
+								return <div><Link to={`/single_products/${id}`}>
 												<Image src={photo} alt={name} ></Image> 
 												<h2 className="cartProduct" key={item.id}><b>{name}</b> ({item.count} x {userMon(price[1])}) <b>= {userMon(price[1] * item.count)}</b></h2>
 									   
-											<Item key={item.id} data={item} className="addfav"/>
+											
                                       </Link>
+									  <Item key={item.id} data={item} className="addfav"/>
+									  </div>
 										}))
-						: (<div>No items in your cart, try going to the <Link to="/">shop</Link></div> )
+						: (<div><h3 style={{color:'red',fontSize:'20px'}}>No items in your cart, try going to SHOP </h3></div> )
 					}
 				</ul>
-				<footer>
-					{/* {Boolean(favi.length) && <div><button className="add-to-cart-btn">Check out {uMoney(subtotal)}</button></div>} */}
+				<footer style={{marginTop:'28em'}}>
+					
 				</footer>
 		</Layout>
 	)

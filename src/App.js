@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from 'react'
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect, BrowserRouter } from 'react-router-dom'
 import 'material-design-icons/iconfont/material-icons.css'
 import ProductsContext from 'context/products'
 import Checkout  from 'pages/Checkout'
@@ -12,7 +12,7 @@ import Products from 'pages/Products'
 import FourOhFour from 'pages/FourOhFour'
 import 'css/reset.css';
 import 'css/index.css';
-import FavoritedItem from './pages/FavouritedItem'
+import FavouritedItem from './pages/FavouritedItem'
 
 
 const App = () => {
@@ -78,16 +78,20 @@ const App = () => {
            <ProductsContext.Provider value={productsAr}>
            <CartContext.Provider value={{data: cart, updater: addToCart}}>
            <FavContext.Provider value={{data: fav, updater: addToFav}}>
+             <BrowserRouter>
            <Switch>
              <Route exact path="/"> <Products data = {productsAr} /></Route>
-             <Route  path="*"><Single_product page_tit={"PRODUCT"}/></Route>
-             <Route  path="/cart"> <Checkout page_tit={"CART"}/> </Route>
-             <Route  path="/fav"> <FavoritedItem page_tit={"FAV"}/> </Route>
+             
+             <Route  path="/cart"> <Checkout /> </Route>
+             <Route  path="/favouriteditem"> <FavouritedItem /> </Route>
+             <Route  path="*"><Single_product /></Route>
+             <Route path="*"> <Products data={productsAr} /> </Route>
              <Route path="*"><FourOhFour /></Route>
              {/* <Route path="/404"><FourOhFour /></Route>
              <Redirect to="/404" /> */}
              <Redirect to="/" />
            </Switch>
+           </BrowserRouter>
            </FavContext.Provider>
            </CartContext.Provider>
            </ProductsContext.Provider>

@@ -30,7 +30,7 @@ const SearchResults = ({result}) => {
 
   return (
     <div  style={{backgroundColor: 'black', padding: `1em`, maxWidth: 'inherit'}}>
-      <h3 style = {{backgroundColor:'rgb(182, 130, 93)', textAlign: 'center', color: 'white'}}>Results</h3>
+      <h3 style = {{backgroundColor:'rgb(182, 130, 93)', textAlign: 'center', color: 'black'}}>Results</h3>
       <div id="iproducts" style={{backgroundColor: `salmon`, padding: `1em`,color:'black'}}>
         {(theProducts.length) ? theProducts : `No matching products`}
       </div>
@@ -45,9 +45,9 @@ const SearchResults = ({result}) => {
           <span className="material-icons">navigate_next</span>
         </button>
       </p>
-      
+      <p>
       <Pagination current={currPage} total={result.length} defaultPageSize={pageSize} onChange={(page) => setCurrPage(page)} />
-      
+      </p>
         
     </div>
   )

@@ -3,7 +3,7 @@ import ProductsContext from 'context/products'
 import Layout from 'components/Layout'
 import Image from 'components/Image'
 import Item from 'components/Item'
-import Fav from 'components/Fav'
+import FavItem from 'components/FavItem'
 import 'css/singleproductdetails.css'
 import {useParams} from 'react-router-dom'
 
@@ -13,8 +13,8 @@ const Single_product = ({data, page_tit}) => {
   console.log("DAta:",products)
   const {slug} = useParams()
   console.log("slug1:",slug);
-  const {id, photo, name,colors,storage, price, ratings} = products.find(product => product.id == slug)
-  const prod = products.find(product => product.id == slug)
+  const {id, photo, name,colors,storage, price, ratings} = products.find(product => product.id === slug)
+  const prod = products.find(product => product.id === slug)
   console.log("slug:",slug);
 
   let the_r = []
@@ -26,7 +26,7 @@ const Single_product = ({data, page_tit}) => {
       }
   }
 
-  const the_store = storage.map((store) => <li><label><input type="radio" name="storage" value="s" key={id}/>{storage}</label></li>)
+  const the_store = storage.map((store) => <li><label><input type="radio" name="storage" value="s" key={id}/>{store}</label></li>)
   const the_color = colors.map((col) => <li><label><input type="radio" name="color" value="c"/>{col}</label></li>)
 
   return (
@@ -49,12 +49,12 @@ const Single_product = ({data, page_tit}) => {
                     {the_r}</dd>
                   </dl>
                   <a href="#"  style={{color:'lightseagreen',textDecoration:`underline`}}>see more</a>
-                 <div className="product-list-cart">
+                 <div>
                    {/* <button type="button" id="addtocart" value="addtocart"><span className="material-icons">add_shopping_cart</span> Add to Cart</button> */
                    }
-                   <Item key={id} data={prod } />
+                   <Item key={id} data={prod }  /> 
                    {/* <button type="button"><span className="material-icons">favorite</span></button> */}
-                    <Fav key={id} data={prod } />
+                    <FavItem key={id} data={prod } />
                  </div>
                  <div className="EMI">
                    <h4><strong>EMI</strong> starts at $67.09. No cost EMI available</h4>

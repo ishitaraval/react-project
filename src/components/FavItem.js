@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import {FavContext, userMon}  from 'context/fav'
 
 
-const Fav= ({data}) => {
+const FavItem= ({data}) => {
 	console.log("Data for fav: ",data)
     const {id, name,price} = data
 	const {data1, updater} = useContext(FavContext)
@@ -18,4 +18,4 @@ const Fav= ({data}) => {
 	)
 }
 
-export default Fav
+export default FavItem
